@@ -146,7 +146,7 @@ const Red = styled.span`
   font-weight: bold;
 `;
 
-const TechnologiesPc = styled.div`
+const TechnologiesPc = styled(motion.div)`
   margin: 50px 0;
   padding-bottom: 150px;
   z-index: 3;
@@ -161,9 +161,9 @@ const TechnologiesMobile = styled.div`
   padding-bottom: 150px;
   z-index: 3;
   position: relative;
-  transition: 0.1s ; 
+  transition: 0.1s;
   @media (max-width: 769px) {
-    display: block ;
+    display: block;
   }
 `;
 
@@ -183,7 +183,7 @@ const FreeCodeCamp = styled(motion.div)`
 
 const HackerRank = styled(motion.div)`
   position: absolute;
-  left: 5%;
+  left: 15%;
   z-index: 2;
   @media (max-width: 769px) {
     margin-top: 20px;
@@ -313,15 +313,15 @@ const Testimonials = styled.div`
 `;
 
 const TestimonialsContainer = styled.div`
-  transition: 0.1s ;
+  transition: 0.1s;
   display: flex;
   gap: 40px;
 `;
 
 function About({ about }) {
   const { normal, xLarge } = fonts();
-  const { scrollYProgress   } = useScroll();
-  const [ scrollYPosition , setScrollYPosition ] = useState()
+  const { scrollYProgress } = useScroll();
+  const [scrollYPosition, setScrollYPosition] = useState();
   const onScreenAnimation = {
     initial: { opacity: 0, transform: "translateY(30px)" },
     whileInView: {
@@ -339,22 +339,30 @@ function About({ about }) {
       transition: { duration: 1 },
     },
   };
-  
-  useEffect(()=>{
-    scrollYProgress.onChange(v=> {
-      setScrollYPosition(v * 1600)
-    })
-  },[scrollYProgress ])
+
+  useEffect(() => {
+    scrollYProgress.onChange((v) => {
+      setScrollYPosition(v * 1600);
+    });
+  }, [scrollYProgress]);
 
   return (
     <Main ref={about}>
       <AboutMe>
-        <Title fontSize={xLarge} variants={onScreenAnimation}
-        initial="initial"
-        whileInView="whileInView" >ABOUT ME</Title>
-        <Description fontSize={normal} variants={onScreenAnimation}
-        initial="initial"
-        whileInView="whileInView" >
+        <Title
+          fontSize={xLarge}
+          variants={onScreenAnimation}
+          initial="initial"
+          whileInView="whileInView"
+        >
+          ABOUT ME
+        </Title>
+        <Description
+          fontSize={normal}
+          variants={onScreenAnimation}
+          initial="initial"
+          whileInView="whileInView"
+        >
           A highly skilled full-stack developer with expertise in{" "}
           <Red>React, React Native, Node.js, </Red> and{" "}
           <Red>Ruby on Rails.</Red> I have developed real-world projects such as
@@ -364,10 +372,18 @@ function About({ about }) {
           continuously learning and adapting to new technologies.
         </Description>
       </AboutMe>
-      <TechnologiesPc>
+      <TechnologiesPc
+        variants={onScreenAnimation}
+        initial="initial"
+        whileInView="whileInView"
+      >
         <Expertise />
       </TechnologiesPc>
-      <TechnologiesMobile style={{transform: `translateX(calc(${scrollYPosition}px - 900px )) `}} >
+      <TechnologiesMobile
+        style={{
+          transform: `translateX(calc(${scrollYPosition}px - 900px )) `,
+        }}
+      >
         <Expertise />
       </TechnologiesMobile>
       <Testimonials>
@@ -375,7 +391,9 @@ function About({ about }) {
           DONT TAKE MY WORDS <Highlighted>ONLY</Highlighted>
         </Title>
         <TestimonialsContainer
-          style={{transform: `translateX(calc(-${scrollYPosition}px + 1300px )) `}}
+          style={{
+            transform: `translateX(calc(-${scrollYPosition}px + 1300px )) `,
+          }}
         >
           {testimonials.map((testimonial) => (
             <TestimonialCard

@@ -8,6 +8,8 @@ import Menu from "../layout/menu.jsx"
 import Footer from "../layout/footer"
 import Navigation from "../layout/navigation"
 import { useRef } from "react"
+import Head from 'next/head'
+import logo from '../assets/images/logoWhite.png'
 
 const Main = styled.div`
   background-color: ${colors.background};
@@ -29,6 +31,10 @@ export default function Home() {
 
   return (
     <Main>
+      <Head>
+        <title>Shayan Portfolio</title>
+        <link rel="icon" href={logo.src} />
+      </Head>
       <Menu about={about} projects={projects} contact={contact} />
       <Navigation hero={hero} />
       <Hero hero={hero} contact={contact} />
