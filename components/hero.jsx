@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { styled } from "styled-components";
 import { colors, width } from "../utilities/common";
 import { CustomButton, IconContainer } from "../elements/button";
@@ -9,6 +9,8 @@ import microverse from "../assets/images/microverse.png";
 import earth from "../assets/images/earth.png";
 import satellite from "../assets/images/satellite.png";
 import fonts from "../hooks/font";
+import { mousemove, mouseout } from "../hooks/magnetic";
+import { motion } from "framer-motion";
 
 const BackgroundContainer = styled.div`
   width: 100%;
@@ -34,6 +36,8 @@ const Main = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
+  max-width: ${width.maxWidth};
+  position: relative;
 `;
 
 const MainText = styled.div`
@@ -45,6 +49,11 @@ const MainText = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 200px;
+
+  @media (max-width: 426px) {
+    width: 300px;
+    margin-bottom: 250px;
+  }
 `;
 
 const Red = styled.span`
@@ -52,7 +61,7 @@ const Red = styled.span`
   font-weight: bold;
 `;
 
-const H3 = styled.h3`
+const H3 = styled(motion.h3)`
   font-size: ${({ fontSize }) => fontSize};
   font-weight: normal;
   ${({ dim }) => dim && "opacity: 0.5 ;"}
@@ -60,31 +69,55 @@ const H3 = styled.h3`
     letterSpacing && `letter-spacing: ${letterSpacing} ;`}
 `;
 
-const H1 = styled.h3`
+const H1 = styled(motion.h3)`
   font-size: ${({ fontSize }) => fontSize};
   margin-bottom: 20px;
 `;
 
 const IconContainerCarmed = styled(IconContainer)`
   position: absolute;
-  transform: translateX(450px) translateY(-300px);
+  top: 100px;
+  right: 20%;
+  transition: 0.05s ease-in-out;
+  @media (max-width: 769px) {
+    right: 10%;
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const IconContainerSkupreme = styled(IconContainer)`
   position: absolute;
-  transform: translateX(-450px) translateY(-150px);
+  left: 20%;
+  top: 30%;
+  @media (max-width: 769px) {
+    top: 55%;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const IconContainerMicroverse = styled(IconContainer)`
   position: absolute;
-  transform: translateX(400px) translateY(50px);
+  right: 15%;
+  bottom: 40%;
+  @media (max-width: 769px) {
+    bottom: 30%;
+    right: 5%;
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const EarthContainer = styled.div`
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%) translateY(70%);
+  transform: translateX(-50%) translateY(75%);
+  @media (max-width: 426px) {
+    transform: translateX(-50%) translateY(60%);
+  }
 `;
 
 const EarthImage = styled.img`
@@ -101,17 +134,10 @@ const EarthImage = styled.img`
     }
   }
   z-index: 2;
-`;
-
-const BackLight = styled.span`
-  position: absolute;
-  left: -25vw;
-  bottom: 340px;
-  transform: translateY(-500px);
-  z-index: 3;
-  width: 150vw;
-  height: 200px;
-  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 20% , rgba(0,0,0,0) 50%);;
+  @media (max-width: 426px) {
+    width: 700px;
+    height: 700px;
+  }
 `;
 
 const Satellite = styled.img`
@@ -119,7 +145,7 @@ const Satellite = styled.img`
   left: 480px;
   width: 200px;
   z-index: 4;
-  transform: translateY(-400px);
+  transform: translateY(-600px);
   animation: rotating2 40s linear infinite;
   @keyframes rotating2 {
     0% {
@@ -127,6 +153,21 @@ const Satellite = styled.img`
     }
     100% {
       transform: rotateZ(-90deg) translateY(-600px);
+    }
+  }
+
+  @media (max-width: 426px) {
+    left: 550px;
+    width: 110px;
+    transform: translateY(-350px);
+    animation: rotating2 20s linear infinite;
+    @keyframes rotating2 {
+      0% {
+        transform: rotateZ(90deg) translateY(-350px);
+      }
+      100% {
+        transform: rotateZ(-90deg) translateY(-350px);
+      }
     }
   }
 `;
@@ -146,6 +187,21 @@ const Satellite2 = styled.img`
       transform: rotateZ(90deg) translateY(-600px);
     }
   }
+
+  @media (max-width: 426px) {
+    width: 70px;
+    left: 560px;
+    transform: translateY(-350px);
+    animation: rotating3 30s linear infinite;
+    @keyframes rotating3 {
+      0% {
+        transform: rotateZ(-90deg) translateY(-350px);
+      }
+      100% {
+        transform: rotateZ(90deg) translateY(-350px);
+      }
+    }
+  }
 `;
 
 const Background = () => {
@@ -153,11 +209,19 @@ const Background = () => {
     <BackgroundContainer>
       <BackgroundRelative>
         <EarthContainer>
-          <span style={{position: "relative" , display: "flex" , alignItems: "center" , justifyContent: "center" , width: "1200px" , height: "1200px"}} >
+          <span
+            style={{
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "1200px",
+              height: "1200px",
+            }}
+          >
             <EarthImage src={earth.src} />
-            <BackLight />
-            <Satellite  src={satellite.src} />
-            <Satellite2  src={satellite.src} />
+            <Satellite src={satellite.src} />
+            <Satellite2 src={satellite.src} />
           </span>
         </EarthContainer>
       </BackgroundRelative>
@@ -165,32 +229,85 @@ const Background = () => {
   );
 };
 
-function Hero() {
+function Hero({ hero, contact }) {
   const { normal, xLarge } = fonts();
 
+  function visitContact() {
+    contact.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
-    <Main>
+    <Main ref={hero}>
       <Background />
       <MainText>
-        <H3 fontSize={normal}>HI THERE!</H3>
-        <H1 fontSize={xLarge}>I AM SHAYAN</H1>
-        <H3 fontSize={normal} dim={true} letterSpacing="1px">
+        <H3
+          fontSize={normal}
+          initial={{ opacity: 0, transform: "translateY(30px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0px)" ,transition: { duration: 0.1 } }}
+        >
+          HI THERE!
+        </H3>
+        <H1
+          fontSize={xLarge}
+          initial={{ opacity: 0, transform: "translateY(30px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0px)" ,transition: { duration: 0.3 } }}
+        >
+          I AM SHAYAN
+        </H1>
+        <H3
+          fontSize={normal}
+          dim={true}
+          letterSpacing="1px"
+          initial={{ opacity: 0, transform: "translateY(30px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0px)",transition: { duration: 0.6 }  }}
+        >
           Leveraging <Red>Web 3.0</Red>, 3D libraries, and innovative frameworks
           to create immersive applications that deliver cutting-edge user
           experiences.
         </H3>
         <CustomButton
+          initial={{ opacity: 0, transform: "translateY(30px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0px)",transition: { duration: 1 }  }}
           color={colors.blue}
           icon={phone}
           style={{ marginTop: "20px" }}
+          onClick={visitContact}
         >
           FULL STACK DEVELOPER
         </CustomButton>
       </MainText>
 
-      <IconContainerCarmed shadow icon={carmed} />
-      <IconContainerSkupreme shadow icon={skupreme} width="20px" />
-      <IconContainerMicroverse shadow icon={microverse} />
+      <IconContainerCarmed
+        initial={{ opacity: 0, marginTop: "30px" }}
+        whileInView={{ opacity: 1, marginTop: "0px" ,transition: { duration: 1 } }}
+        onMouseMove={mousemove}
+        onMouseOut={mouseout}
+        shadow
+        icon={carmed}
+        description="Worked As Full-Stack Developer At Carmed"
+        width="25px"
+      />
+      <IconContainerSkupreme
+        initial={{ opacity: 0, marginTop: "30px" }}
+        whileInView={{ opacity: 1, marginTop: "0px",transition: { duration: 1 } }}
+        onMouseMove={mousemove}
+        onMouseOut={mouseout}
+        shadow
+        icon={skupreme}
+        description="Worked As Frontend Developer At Skupreme"
+        width="20px"
+      />
+      <IconContainerMicroverse
+        initial={{ opacity: 0, marginBottom: "-30px" }}
+        whileInView={{ opacity: 1, marginBottom: "0px" ,transition: { duration: 1 }}}
+        onMouseMove={mousemove}
+        onMouseOut={mouseout}
+        shadow
+        icon={microverse}
+        description="Worked As Code Reviewer At Microverse"
+      />
     </Main>
   );
 }

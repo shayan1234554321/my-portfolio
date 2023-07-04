@@ -5,7 +5,7 @@ import mathias from '../assets/images/mathias.png'
 const colors = {
     black : "rgba(0, 0, 0, 1)",
     blackProject : "rgba(34, 34, 34, 1)",
-    background : "rgba(237, 237, 237, 1)",
+    background : "rgba(243, 243, 243, 1)",
     white: "rgba(255, 255, 255, 1)",
     blue: "rgba(39, 203, 255, 1)",
     red : "rgba(255, 67, 67, 1)"
@@ -37,7 +37,7 @@ const radius = {
 }
 
 const width = {
-    maxWidth : "1800px"
+    maxWidth : "1500px"
 }
 
 export { colors , width , radius , testimonials }

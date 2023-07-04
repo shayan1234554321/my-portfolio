@@ -5,6 +5,9 @@ import About from "../components/about"
 import Contact from "../components/contact"
 import { colors } from "../utilities/common"
 import Menu from "../layout/menu.jsx"
+import Footer from "../layout/footer"
+import Navigation from "../layout/navigation"
+import { useRef } from "react"
 
 const Main = styled.div`
   background-color: ${colors.background};
@@ -14,16 +17,25 @@ const Main = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  margin: 0;
 `
 
 export default function Home() {
+
+  const hero = useRef(null)
+  const projects = useRef(null)
+  const about = useRef(null)
+  const contact = useRef(null)
+
   return (
     <Main>
-      <Menu />
-      <Hero />
-      <Projects />
-      <About />
-      <Contact />
+      <Menu about={about} projects={projects} contact={contact} />
+      <Navigation hero={hero} />
+      <Hero hero={hero} contact={contact} />
+      <Projects projects={projects} />
+      <About about={about} />
+      <Contact contact={contact} />
+      <Footer />
     </Main>
   )
 }
