@@ -1,5 +1,7 @@
 <a name="readme-top"></a>
 
+<img src="./portfoliopreview.png" />
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
