@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import { colors, width, testimonials } from "../utilities/common";
 import fonts from "../hooks/font";
 import { IconContainer } from "../elements/button";

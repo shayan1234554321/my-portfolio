@@ -3,7 +3,7 @@ import logo from "../assets/images/logo.png";
 import github from "../assets/images/github.png";
 import linkedin from "../assets/images/linkedin.png";
 import list from "../assets/images/list.png";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import { width } from "../utilities/common";
 import fonts from '../hooks/font'
 

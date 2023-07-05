@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import { colors, width } from "../utilities/common";
 import { CustomButton, IconContainer } from "../elements/button";
 import phone from "../assets/images/phone.png";

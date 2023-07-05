@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import fonts from "../hooks/font";
 import { colors, radius } from "../utilities/common";
 import tickImage from "../assets/images/tick.png";

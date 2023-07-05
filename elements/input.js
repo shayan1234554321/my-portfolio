@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 import fonts from "../hooks/font";
 import { colors, radius } from "../utilities/common";
 import { useEffect, useState } from "react";

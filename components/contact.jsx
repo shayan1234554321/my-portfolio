@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CustomButton } from "../elements/button";
 import { colors, radius, width } from "../utilities/common";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import fonts from "../hooks/font";
 import { CustomInput, CustomTextArea } from "../elements/input";
 import emailjs from "@emailjs/browser";

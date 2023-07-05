@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import { colors } from "../utilities/common";
 import logo from "../assets/images/logoWhite.png";
 import fonts from '../hooks/font'

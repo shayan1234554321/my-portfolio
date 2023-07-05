@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import arrow from "../assets/images/arrowWhite.png";
 import { colors } from "../utilities/common";
 import { mousemove, mouseout } from "../hooks/magnetic";
