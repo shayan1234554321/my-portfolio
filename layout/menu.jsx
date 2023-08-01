@@ -41,7 +41,7 @@ const MenuList = styled.ul`
   @media (max-width: 769px) {
     display: none;
   }
-  :active {
+  li:active {
     transform: scale(0.8);
   }
 `

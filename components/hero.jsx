@@ -245,14 +245,22 @@ function Hero({ hero, contact }) {
         <H3
           fontSize={normal}
           initial={{ opacity: 0, transform: "translateY(30px)" }}
-          whileInView={{ opacity: 1, transform: "translateY(0px)" ,transition: { duration: 0.1 } }}
+          whileInView={{
+            opacity: 1,
+            transform: "translateY(0px)",
+            transition: { duration: 0.1 },
+          }}
         >
           HI THERE!
         </H3>
         <H1
           fontSize={xLarge}
           initial={{ opacity: 0, transform: "translateY(30px)" }}
-          whileInView={{ opacity: 1, transform: "translateY(0px)" ,transition: { duration: 0.3 } }}
+          whileInView={{
+            opacity: 1,
+            transform: "translateY(0px)",
+            transition: { duration: 0.3 },
+          }}
         >
           I AM SHAYAN
         </H1>
@@ -261,15 +269,23 @@ function Hero({ hero, contact }) {
           dim={true}
           letterSpacing="1px"
           initial={{ opacity: 0, transform: "translateY(30px)" }}
-          whileInView={{ opacity: 1, transform: "translateY(0px)",transition: { duration: 0.6 }  }}
+          whileInView={{
+            opacity: 1,
+            transform: "translateY(0px)",
+            transition: { duration: 0.6 },
+          }}
         >
-          Leveraging <Red>Web 3.0</Red>, 3D libraries, and innovative frameworks
-          to create immersive applications that deliver cutting-edge user
-          experiences.
+          Leveraging <Red>3D Technologies</Red>, Latest frameworks, and
+          innovative design to create applications that deliver
+          cutting-edge user experiences.
         </H3>
         <CustomButton
           initial={{ opacity: 0, transform: "translateY(30px)" }}
-          whileInView={{ opacity: 1, transform: "translateY(0px)",transition: { duration: 1 }  }}
+          whileInView={{
+            opacity: 1,
+            transform: "translateY(0px)",
+            transition: { duration: 1 },
+          }}
           color={colors.blue}
           icon={phone}
           style={{ marginTop: "20px" }}
@@ -281,32 +297,47 @@ function Hero({ hero, contact }) {
 
       <IconContainerCarmed
         initial={{ opacity: 0, marginTop: "30px" }}
-        whileInView={{ opacity: 1, marginTop: "0px" ,transition: { duration: 1 } }}
+        whileInView={{
+          opacity: 1,
+          marginTop: "0px",
+          transition: { duration: 1 },
+        }}
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         shadow
         icon={carmed}
         description="Worked As Full-Stack Developer At Carmed"
         width="25px"
+        onClick={()=> window.open("https://carmed.onrender.com/", "_blank")}
       />
       <IconContainerSkupreme
         initial={{ opacity: 0, marginTop: "30px" }}
-        whileInView={{ opacity: 1, marginTop: "0px",transition: { duration: 1 } }}
+        whileInView={{
+          opacity: 1,
+          marginTop: "0px",
+          transition: { duration: 1 },
+        }}
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         shadow
         icon={skupreme}
         description="Worked As Frontend Developer At Skupreme"
         width="20px"
+        onClick={()=> window.open("https://skupreme.com/", "_blank")}
       />
       <IconContainerMicroverse
         initial={{ opacity: 0, marginBottom: "-30px" }}
-        whileInView={{ opacity: 1, marginBottom: "0px" ,transition: { duration: 1 }}}
+        whileInView={{
+          opacity: 1,
+          marginBottom: "0px",
+          transition: { duration: 1 },
+        }}
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         shadow
         icon={microverse}
-        description="Worked As Code Reviewer At Microverse"
+        description="Bootcamp from Microverse"
+        onClick={()=> window.open("https://www.microverse.org/", "_blank")}
       />
     </Main>
   );

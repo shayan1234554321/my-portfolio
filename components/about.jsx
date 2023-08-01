@@ -24,8 +24,12 @@ import {
   reactImage,
   redux,
   ruby,
-  tailwind,
   freeCodeCamp,
+  aws,
+  cloudinary,
+  sanity,
+  stripe,
+  three
 } from "../utilities/imports";
 import { TestimonialCard, Highlighted } from "../elements/common";
 import { mousemove, mouseout } from "../hooks/magnetic";
@@ -46,7 +50,7 @@ const ExpertiseContainer = styled.div`
 const Expertise = () => {
   return (
     <ExpertiseContainer>
-      <IconContainer icon={express} shadow description="Express" />
+      <IconContainer icon={express} shadow description="Node.js / Express" />
       <IconContainer icon={figma} width="15px" shadow description="Figma" />
       <IconContainer icon={github} width="25px" shadow description="Github" />
       <IconContainer icon={html} width="20px" shadow description="HTML" />
@@ -63,9 +67,8 @@ const Expertise = () => {
         icon={reactImage}
         width="25px"
         shadow
-        description="React.js"
+        description="React / React Native"
       />
-      <IconContainer icon={tailwind} shadow description="Tailwind" />
       <IconContainer
         icon={postgreSQL}
         width="20px"
@@ -85,6 +88,11 @@ const Expertise = () => {
       <IconContainer icon={ruby} width="20px" shadow description="Ruby" />
       <IconContainer icon={rails} shadow description="Ruby On Rails" />
       <IconContainer icon={jest} width="20px" shadow description="Jest" />
+      <IconContainer icon={sanity} width="35px" shadow description="Sanity" />
+      <IconContainer icon={stripe} width="30px" shadow description="Stripe" />
+      <IconContainer icon={aws} shadow description="AWS" />
+      <IconContainer icon={cloudinary} shadow description="Cloudinary" />
+      <IconContainer icon={three} shadow description="Three.js" />
     </ExpertiseContainer>
   );
 };
@@ -372,6 +380,14 @@ function About({ about }) {
           continuously learning and adapting to new technologies.
         </Description>
       </AboutMe>
+      <motion.h5
+        style={{ marginTop: "20px" }}
+        variants={onScreenAnimation}
+        initial="initial"
+        whileInView="whileInView"
+      >
+        <Red>SOME OF MY EXPERTIES</Red>
+      </motion.h5>
       <TechnologiesPc
         variants={onScreenAnimation}
         initial="initial"
@@ -412,6 +428,7 @@ function About({ about }) {
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
+        onClick={()=> window.open("https://www.freecodecamp.org/certification/fcc4829731a-b337-4043-ae9a-542424bcd41f/responsive-web-design", "_blank")}
       >
         <IconContainer
           shadow
@@ -426,6 +443,7 @@ function About({ about }) {
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
+        onClick={()=> window.open("https://www.hackerrank.com/certificates/cfbba55ca0d6", "_blank")}
       >
         <IconContainer
           shadow
@@ -440,6 +458,7 @@ function About({ about }) {
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
+        onClick={()=> window.open("https://www.credential.net/1bb697e9-2cfb-4828-a556-04eae77efc21", "_blank")}
       >
         <IconContainer
           shadow

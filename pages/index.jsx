@@ -34,7 +34,15 @@ export default function Home() {
       <Head>
         <title>Shayan Portfolio</title>
         <link rel="icon" href={logo.src} />
+        <title>Shayan Ali Bakhsh</title>
+        <meta name="description" content="Shayan Ali Bakhsh portfolio website. A web developer full of skills" key="desc" />
+        <meta property="og:title" content="Shayan Ali Bakhsh portfolio" />
+        <meta
+          property="og:description"
+          content="Shayan Ali Bakhsh portfolio website. A web developer full of skills"
+        />
       </Head>
+      <h1 style={{display: "none"}} >Shayan Ali Bakhsh Portfolio</h1>
       <Menu about={about} projects={projects} contact={contact} />
       <Navigation hero={hero} />
       <Hero hero={hero} contact={contact} />

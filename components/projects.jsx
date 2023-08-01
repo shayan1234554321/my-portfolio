@@ -5,9 +5,9 @@ import { CustomButton } from "../elements/button";
 import fonts from "../hooks/font";
 import laptop from "../assets/images/laptop.png";
 import arrow from "../assets/images/arrow.png";
-import project1 from "../assets/images/project1.png";
 import { mousemove, mouseout } from "../hooks/magnetic";
 import { motion } from "framer-motion";
+import { imagineai , roadtrip , futurestore , shirtcrafters } from "../utilities/imports";
 
 const Main = styled.div`
   position: relative;
@@ -52,6 +52,9 @@ const Bottom = styled.div`
   justify-content: center;
   flex-direction: column;
   background-color: ${colors.background};
+  @media (max-width: 426px) {
+    justify-content: end;
+  }
 `;
 
 const Description = styled.p`
@@ -63,7 +66,6 @@ const Description = styled.p`
   opacity: 0.7;
   ${({ changing }) => changing && "animation: opacityChange 2s ease-in-out;"}
   @media (max-width: 426px) {
-    margin-top: -30px;
     width: 90%;
   }
 
@@ -144,9 +146,17 @@ const Title = styled(motion.h2)`
 
 const Buttons = styled.div`
   display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    gap: 20px;
+  }
   gap: 20px;
   @media (max-width: 426px) {
-    flex-direction: column;
+    div {
+      flex-direction: column;
+    }
+    margin-bottom: 40px;
   }
 `;
 
@@ -168,7 +178,7 @@ const ProjectImage = styled.img`
   z-index: 5;
   position: absolute;
   width: 390px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-right: 2px;
   ${({ changing }) => changing && "animation: brightnessChange 2s ease-in-out;"}
 
@@ -315,26 +325,54 @@ const Box2 = styled(motion.div)`
   ${({ changing }) => changing && "animation: fallDownCommon 3s ease-in-out;"}
 `;
 
+const Desc = styled(motion.h3)`
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  border-radius: 40px;
+  padding: 5px 10px;
+`;
+
 function Projects({ projects }) {
   const { normal } = fonts();
   const [current, setCurrent] = useState(0);
   const [changing, setChanging] = useState(false);
   const myProjects = [
     {
-      name: "Flame Cafe",
-      image: project1,
+      name: "Shirt Crafters",
+      image: shirtcrafters,
       description:
-        "A blockchain is a decentralized, distributed and public digital ledger that is used to record transactions across many computers.",
-      code: "https://github.com/shayan1234554321/flame-cafe",
-      visit: "https://shayan1234554321.github.io/flame-cafe/dist/",
+        "The ultimate 3D shirt editing website that empowers you to unleash your creativity and design the shirt of your dreams!",
+      code: "https://github.com/shayan1234554321/3d-project",
+      visit: "https://3d-project-qrui.vercel.app/",
+      video: "https://drive.google.com/file/d/1tKjKqU8tPOpKfcA4chwxM_ZGJFcYVQXu/view",
     },
     {
-      name: "Knowledge Hub",
-      image: project1,
+      name: "Roadtrip Wheels",
+      image: roadtrip,
       description:
-        "A blockchain is a decentralized, distributed and public digital ledger that is used to record transactions across many computers.",
-      code: "https://github.com/shayan1234554321/flame-cafe",
-      visit: "https://shayan1234554321.github.io/flame-cafe/dist/",
+        "The Roadtrip wheels is a car reservation website where you can reserve different cars. We have a great collection",
+      code: "https://github.com/shayan1234554321/RoadTrip-Wheels",
+      visit: "https://roadtrip-wheels.onrender.com",
+      video: "https://drive.google.com/file/d/1k-QgyPQrCUQwdjKDldHB1BCrk6e1zhT-/view",
+    },
+    {
+      name: "Future Store",
+      image: futurestore,
+      description:
+        "Future store is an ecommerce website. You can have many products , have your cart and checkout with stripe integrations.",
+      code: "https://github.com/shayan1234554321/ecommerce",
+      visit: "https://ecommerce-sigma-snowy.vercel.app/",
+      video: "https://drive.google.com/file/d/1Nc6RocW3Uyx_BuwHun2iD6h6pWNLEvbS/view",
+    },
+    {
+      name: "Imagine AI",
+      image: imagineai,
+      description:
+        "Unleash your creativity with this cutting-edge image generation platform Imagine AI just with some prompts.",
+      code: "https://github.com/shayan1234554321/ai-image-generation",
+      visit: "https://ai-image-generation-rouge.vercel.app/",
+      video: "https://drive.google.com/file/d/1MwYNg4eGQK765Qx5KVnSZjndUIliSnNe/view",
     },
   ];
 
@@ -344,6 +382,10 @@ function Projects({ projects }) {
 
   function visitLiveLink() {
     window.open(myProjects[current].visit, "_blank");
+  }
+
+  function visitVideoLink() {
+    window.open(myProjects[current].video, "_blank");
   }
 
   function projectLeft() {
@@ -357,7 +399,7 @@ function Projects({ projects }) {
     }
     setTimeout(() => {
       setCurrent(next);
-    }, [1500]);
+    }, [1000]);
   }
 
   function projectRight() {
@@ -371,13 +413,23 @@ function Projects({ projects }) {
     }
     setTimeout(() => {
       setCurrent(next);
-    }, [1500]);
+    }, [1000]);
   }
 
   return (
     <Main ref={projects}>
       <BlackBg />
       <Top>
+        <Desc
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+        >
+          MY PROJECTS
+        </Desc>
         <Title
           initial={{
             opacity: 0,
@@ -450,11 +502,16 @@ function Projects({ projects }) {
           {myProjects[current].description}
         </Description>
         <Buttons>
-          <CustomButton onClick={visitCode} long color={colors.blue}>
-            CODE
-          </CustomButton>
-          <CustomButton onClick={visitLiveLink} long color={colors.red}>
-            VISIT
+          <div>
+            <CustomButton onClick={visitCode} long color={colors.blue}>
+              CODE
+            </CustomButton>
+            <CustomButton onClick={visitLiveLink} long color={colors.red}>
+              VISIT
+            </CustomButton>
+          </div>
+          <CustomButton onClick={visitVideoLink} long color={colors.black}>
+            VIDEO DEMO
           </CustomButton>
         </Buttons>
         <Left

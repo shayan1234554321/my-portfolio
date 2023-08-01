@@ -18,6 +18,7 @@ const CustomButtonStyled = styled(motion.button)`
   letter-spacing: 1px;
   display: flex;
   align-items: center;
+  justify-content: center;
   transform: scale(1);
   animation: hoverOut 0.4s ease-in-out;
   ${({ loading }) => (loading &&  "pointer-events: none;")}
@@ -127,6 +128,7 @@ const Tick = styled.img`
 
 const IconContainerStyled = styled(motion.div)`
   position: relative;
+  cursor: pointer;
   padding: 10px;
   width: 30px;
   height: 30px;
