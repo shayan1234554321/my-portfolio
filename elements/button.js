@@ -128,13 +128,14 @@ const Tick = styled.img`
 
 const IconContainerStyled = styled(motion.div)`
   position: relative;
-  cursor: pointer;
+  cursor: ${ ({noLink})=> noLink? "default": "pointer"};
   padding: 10px;
   width: 30px;
   height: 30px;
   border-radius: ${radius.boxRadius};
   background-color: white;
   display: flex;
+  z-index: 12;
   align-items: center;
   justify-content: center;
   ${({ shadow }) => shadow && "box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);"}
@@ -144,7 +145,7 @@ const IconContainerStyled = styled(motion.div)`
     position: absolute;
     pointer-events: none;
     top: -40px;
-    z-index: 4;
+    z-index: 12;
     font-size: 12px;
     background-color: white;
     padding: 5px 10px;
@@ -208,10 +209,11 @@ function IconContainer({
   icon,
   width = "30px",
   description = "",
+  noLink = false ,
   ...rest
 }) {
   return (
-    <IconContainerStyled shadow={shadow} {...rest}>
+    <IconContainerStyled noLink={noLink} shadow={shadow} {...rest}>
       <div style={{ pointerEvents: "none" }}>{description}</div>
       <IconTemp src={icon.src} width={width} />
       {tick && <Tick src={tickImage.src} />}

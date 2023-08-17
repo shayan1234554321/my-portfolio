@@ -8,9 +8,10 @@ import mongoDB from '../assets/images/mongoDB.png'
 import next from '../assets/images/next.png'
 import reactImage from '../assets/images/react.png'
 import postgreSQL from '../assets/images/postgreSQL.png'
-import axios from '../assets/images/axios.png'
-import bootstrap from '../assets/images/bootstrap.png'
-import css from '../assets/images/css.png'
+import brain from '../assets/images/brain.png'
+import fire from '../assets/images/fire.png'
+import circuit from '../assets/images/circuit.png'
+// import css from '../assets/images/css.png'
 import redux from '../assets/images/redux.png'
 import firebase from '../assets/images/firebase.png'
 import ruby from '../assets/images/ruby.png'
@@ -32,6 +33,9 @@ import three from '../assets/images/three.png'
 
 
 export {
+    brain,
+    circuit,
+    fire,
     cursor,
     aws,
     cloudinary,
@@ -55,9 +59,6 @@ export {
     next,
     reactImage,
     postgreSQL,
-    axios,
-    bootstrap,
-    css,
     redux,
     firebase,
     ruby,

@@ -5,14 +5,16 @@ import linkedin from "../assets/images/linkedin.png";
 import list from "../assets/images/list.png";
 import styled from "styled-components";
 import { width } from "../utilities/common";
-import fonts from '../hooks/font'
+import fonts from '../hooks/font';
+import { colors } from "../utilities/common";
 
 const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 100px;
-  position: absolute;
+  position: fixed;
+  background-color: ${ colors.background };
   width: calc(100% - 200px );
   z-index: 10 ;
   @media (max-width: 769px) {
@@ -37,6 +39,7 @@ const MenuList = styled.ul`
   font-weight: bold;
   opacity: 0.7;
   letter-spacing: 1px;
+  z-index: 14;
   font-size: ${({normal})=> normal };
   @media (max-width: 769px) {
     display: none;
