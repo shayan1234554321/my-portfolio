@@ -135,7 +135,7 @@ const IconContainerStyled = styled(motion.div)`
   border-radius: ${radius.boxRadius};
   background-color: white;
   display: flex;
-  z-index: 12;
+  z-index: 9;
   align-items: center;
   justify-content: center;
   ${({ shadow }) => shadow && "box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);"}
@@ -145,7 +145,6 @@ const IconContainerStyled = styled(motion.div)`
     position: absolute;
     pointer-events: none;
     top: -40px;
-    z-index: 12;
     font-size: 12px;
     background-color: white;
     padding: 5px 10px;

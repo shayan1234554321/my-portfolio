@@ -78,6 +78,7 @@ const IconContainerCarmed = styled(IconContainer)`
   position: absolute;
   top: 100px;
   right: 20%;
+  z-index: 12;
   transition: 0.05s ease-in-out;
   @media (max-width: 769px) {
     right: 10%;
