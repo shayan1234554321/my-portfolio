@@ -11,7 +11,8 @@ import postgreSQL from '../assets/images/postgreSQL.png'
 import brain from '../assets/images/brain.png'
 import fire from '../assets/images/fire.png'
 import circuit from '../assets/images/circuit.png'
-// import css from '../assets/images/css.png'
+import google from '../assets/images/google.png'
+import meta from '../assets/images/meta.png'
 import redux from '../assets/images/redux.png'
 import firebase from '../assets/images/firebase.png'
 import ruby from '../assets/images/ruby.png'
@@ -33,6 +34,8 @@ import three from '../assets/images/three.png'
 
 
 export {
+    google,
+    meta,
     brain,
     circuit,
     fire,

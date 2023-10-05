@@ -5,7 +5,7 @@ import { CustomButton, IconContainer } from "../elements/button";
 import phone from "../assets/images/phone.png";
 import carmed from "../assets/images/carmed.png";
 import skupreme from "../assets/images/skupreme.png";
-import microverse from "../assets/images/microverse.png";
+import sumiaka from "../assets/images/sumiaka.png";
 import earth from "../assets/images/earth.png";
 import satellite from "../assets/images/satellite.png";
 import fonts from "../hooks/font";
@@ -99,7 +99,7 @@ const IconContainerSkupreme = styled(IconContainer)`
   }
 `;
 
-const IconContainerMicroverse = styled(IconContainer)`
+const IconContainerSumiaka = styled(IconContainer)`
   position: absolute;
   right: 15%;
   bottom: 40%;
@@ -325,8 +325,8 @@ function Hero({ hero, contact }) {
         description="Worked As Frontend Developer At Skupreme"
         width="20px"
         onClick={()=> window.open("https://skupreme.com/", "_blank")}
-      />
-      <IconContainerMicroverse
+        />
+      <IconContainerSumiaka
         initial={{ opacity: 0, marginBottom: "-30px" }}
         whileInView={{
           opacity: 1,
@@ -335,10 +335,11 @@ function Hero({ hero, contact }) {
         }}
         onMouseMove={mousemove}
         onMouseOut={mouseout}
+        width="10px"
         shadow
-        icon={microverse}
-        description="Bootcamp from Microverse"
-        onClick={()=> window.open("https://www.microverse.org/", "_blank")}
+        icon={sumiaka}
+        description="Worked as Full-Stack Developer at SUMIAKA"
+        onClick={()=> window.open("https://www.linkedin.com/company/sumiaka/", "_blank")}
       />
     </Main>
   );

@@ -5,7 +5,7 @@ import fonts from "../hooks/font";
 import { IconContainer } from "../elements/button";
 import {
   microverse,
-  hackerRank,
+  meta,
   express,
   figma,
   firebase,
@@ -21,7 +21,7 @@ import {
   reactImage,
   redux,
   ruby,
-  freeCodeCamp,
+  google,
   aws,
   cloudinary,
   sanity,
@@ -175,7 +175,7 @@ const TechnologiesMobile = styled.div`
   }
 `;
 
-const FreeCodeCamp = styled(motion.div)`
+const Google = styled(motion.div)`
   position: absolute;
   right: 5%;
   z-index: 2;
@@ -189,7 +189,7 @@ const FreeCodeCamp = styled(motion.div)`
   }
 `;
 
-const HackerRank = styled(motion.div)`
+const Meta = styled(motion.div)`
   position: absolute;
   left: 15%;
   z-index: 2;
@@ -404,7 +404,7 @@ function About({ about }) {
       </TechnologiesMobile>
       <Testimonials>
         <Title style={{ marginBottom: "100px" }} fontSize={xLarge}>
-           <Highlighted>Testimonials</Highlighted>
+           DON'T TAKE MY WORDS<Highlighted style={{ marginLeft : "15px" }} >ONLY</Highlighted>
         </Title>
         <TestimonialsContainer
           style={{
@@ -422,36 +422,36 @@ function About({ about }) {
         </TestimonialsContainer>
       </Testimonials>
 
-      <FreeCodeCamp
+      <Google
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
-        onClick={()=> window.open("https://www.freecodecamp.org/certification/fcc4829731a-b337-4043-ae9a-542424bcd41f/responsive-web-design", "_blank")}
+        onClick={()=> window.open("https://coursera.org/share/26db931519a929fa09fe1ac52dc9bc3e", "_blank")}
       >
         <IconContainer
           shadow
-          icon={freeCodeCamp}
+          icon={google}
           tick
-          description="Certified From Free Code Camp"
+          description="Certified From Google"
         />
-      </FreeCodeCamp>
-      <HackerRank
+      </Google>
+      <Meta
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
-        onClick={()=> window.open("https://www.hackerrank.com/certificates/cfbba55ca0d6", "_blank")}
+        onClick={()=> window.open("https://coursera.org/share/dd640e24dc605bdad260dbc3eb67956a", "_blank")}
       >
         <IconContainer
           shadow
-          icon={hackerRank}
+          icon={meta}
           tick
-          description="Certified From Hacker Rank"
+          description="Certified From META"
         />
-      </HackerRank>
+      </Meta>
       <Microverse
         onMouseMove={mousemove}
         onMouseOut={mouseout}

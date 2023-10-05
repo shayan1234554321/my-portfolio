@@ -13,7 +13,6 @@ const Header = styled.header`
   align-items: center;
   justify-content: center;
   padding: 20px 100px;
-  position: fixed;
   background-color: ${ colors.background };
   width: calc(100% - 200px );
   z-index: 10 ;
