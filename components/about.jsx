@@ -371,13 +371,11 @@ function About({ about }) {
           initial="initial"
           whileInView="whileInView"
         >
-          A highly skilled full-stack developer with expertise in{" "}
-          <Red>React, React Native, Node.js, </Red> and{" "}
-          <Red>Ruby on Rails.</Red> I have developed real-world projects such as
-          working with supply chain management systems or car maintenance
-          bidding systems etc. With over 3 years of working in this field, I
-          have honed my abilities to thrive in a fast-paced environment,
-          continuously learning and adapting to new technologies.
+          Experienced MERN stack developer with a proven track record in designing and
+          crafting impactful applications using<Red> React, Next.js, Express, and Node.js </Red>. With <Red>2+
+          years</Red> of hands-on experience, I specialize in integrating third-party tools and
+          optimizing SEO, and I am committed to delivering exceptional user experiences
+          through collaborative problem-solving.
         </Description>
       </AboutMe>
       <motion.h5

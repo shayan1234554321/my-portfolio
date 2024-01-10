@@ -44,7 +44,7 @@ function Footer() {
         <img src={logo.src} alt="" />
         <Ul fontSize={normal} >
           <li>
-            <a href="https://docs.google.com/document/d/1suOj6Au2deYOatH0CztBC6hOOHrvz3m_-jSLRA5vdPI/edit?usp=sharing" target="_blank" >
+            <a href="https://drive.google.com/file/d/1V6PODHn36WiW5ry2jJYsbZwUtPFfbE_y/view?usp=sharing" target="_blank" >
               RESUME
             </a>
           </li>

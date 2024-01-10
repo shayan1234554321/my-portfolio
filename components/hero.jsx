@@ -79,6 +79,7 @@ const IconContainerCarmed = styled(IconContainer)`
   top: 100px;
   right: 20%;
   z-index: 12;
+  background-color: ${({ backgroundColor }) => backgroundColor};
   transition: 0.05s ease-in-out;
   @media (max-width: 769px) {
     right: 10%;
@@ -306,10 +307,11 @@ function Hero({ hero, contact }) {
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         shadow
+        backgroundColor={colors.blue}
         icon={carmed}
-        description="Worked As Full-Stack Developer At Carmed"
+        description="Worked As Senior Full-Stack Developer At SMB DigitalZone"
         width="25px"
-        onClick={()=> window.open("https://carmed.onrender.com/", "_blank")}
+        onClick={()=> window.open("https://smbdigitalzone.com/", "_blank")}
       />
       <IconContainerSkupreme
         initial={{ opacity: 0, marginTop: "30px" }}
