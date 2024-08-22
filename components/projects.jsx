@@ -7,7 +7,12 @@ import laptop from "../assets/images/laptop.png";
 import arrow from "../assets/images/arrow.png";
 import { mousemove, mouseout } from "../hooks/magnetic";
 import { motion } from "framer-motion";
-import { imagineai , roadtrip , futurestore , shirtcrafters } from "../utilities/imports";
+import {
+  smbproject,
+  skupremeproject,
+  robodialogproject,
+  sumiakaproject,
+} from "../utilities/imports";
 
 const Main = styled.div`
   position: relative;
@@ -339,53 +344,37 @@ function Projects({ projects }) {
   const [changing, setChanging] = useState(false);
   const myProjects = [
     {
-      name: "Shirt Crafters",
-      image: shirtcrafters,
+      name: "RoboDialog",
+      image: robodialogproject,
       description:
-        "The ultimate 3D shirt editing website that empowers you to unleash your creativity and design the shirt of your dreams!",
-      code: "https://github.com/shayan1234554321/3d-project",
-      visit: "https://3d-project-qrui.vercel.app/",
-      video: "https://drive.google.com/file/d/1tKjKqU8tPOpKfcA4chwxM_ZGJFcYVQXu/view",
+        "An AI Customer Support Agent for websites. Integrate chatbot with your website by just copy and paste a script in website header",
+      visit: "https://robodialog.com/",
     },
     {
-      name: "Roadtrip Wheels",
-      image: roadtrip,
+      name: "SKUPREME",
+      image: skupremeproject,
       description:
-        "The Roadtrip wheels is a car reservation website where you can reserve different cars. We have a great collection",
-      code: "https://github.com/shayan1234554321/RoadTrip-Wheels",
-      visit: "https://roadtrip-wheels.onrender.com",
-      video: "https://drive.google.com/file/d/1k-QgyPQrCUQwdjKDldHB1BCrk6e1zhT-/view",
+        "SKUPREME is the most comprehensive solution for your business, in the form of a global inventory and marketplace integration software",
+      visit: "https://skupreme.com/",
     },
     {
-      name: "Future Store",
-      image: futurestore,
+      name: "SMB DigitalZone",
+      image: smbproject,
       description:
-        "Future store is an ecommerce website. You can have many products , have your cart and checkout with stripe integrations.",
-      code: "https://github.com/shayan1234554321/ecommerce",
-      visit: "https://ecommerce-sigma-snowy.vercel.app/",
-      video: "https://drive.google.com/file/d/1Nc6RocW3Uyx_BuwHun2iD6h6pWNLEvbS/view",
+        "SMB DigitalZone is a software house specializing in website development, SEO, and graphic design. They craft custom digital solutions.",
+      visit: "https://smbdigitalzone.com",
     },
     {
-      name: "Imagine AI",
-      image: imagineai,
+      name: "SUMIAKA",
+      image: sumiakaproject,
       description:
-        "Unleash your creativity with this cutting-edge image generation platform Imagine AI just with some prompts.",
-      code: "https://github.com/shayan1234554321/ai-image-generation",
-      visit: "https://ai-image-generation-rouge.vercel.app/",
-      video: "https://drive.google.com/file/d/1MwYNg4eGQK765Qx5KVnSZjndUIliSnNe/view",
+        "SUMIAKA is an HR solution leveraging machine learning for cost-efficient and highly customizable employee hiring.",
+      visit: "https://www.linkedin.com/company/sumiaka/",
     },
   ];
 
-  function visitCode() {
-    window.open(myProjects[current].code, "_blank");
-  }
-
   function visitLiveLink() {
     window.open(myProjects[current].visit, "_blank");
-  }
-
-  function visitVideoLink() {
-    window.open(myProjects[current].video, "_blank");
   }
 
   function projectLeft() {
@@ -428,7 +417,7 @@ function Projects({ projects }) {
             opacity: 1,
           }}
         >
-          MY PROJECTS
+          COMPANIES I WORKED WITH
         </Desc>
         <Title
           initial={{
@@ -502,16 +491,8 @@ function Projects({ projects }) {
           {myProjects[current].description}
         </Description>
         <Buttons>
-          <div>
-            <CustomButton onClick={visitCode} long color={colors.blue}>
-              CODE
-            </CustomButton>
-            <CustomButton onClick={visitLiveLink} long color={colors.red}>
-              VISIT
-            </CustomButton>
-          </div>
-          <CustomButton onClick={visitVideoLink} long color={colors.black}>
-            VIDEO DEMO
+          <CustomButton onClick={visitLiveLink} long color={colors.black}>
+            VISIT WEBSITE
           </CustomButton>
         </Buttons>
         <Left

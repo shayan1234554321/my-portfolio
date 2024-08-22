@@ -24,13 +24,16 @@ import microverse from '../assets/images/microverse.png'
 import cursor from '../assets/images/cursor.png'
 import aws from '../assets/images/aws.png'
 import cloudinary from '../assets/images/cloudinary.png'
-import futurestore from '../assets/images/futurestore.png'
-import imagineai from '../assets/images/imagineai.png'
-import roadtrip from '../assets/images/roadtrip.png'
 import sanity from '../assets/images/sanity.png'
-import shirtcrafters from '../assets/images/shirtcrafters.png'
 import stripe from '../assets/images/stripe.png'
 import three from '../assets/images/three.png'
+import framermotion from '../assets/images/framermotion.svg'
+import socketIo from '../assets/images/socket-io.svg'
+import puppeteer from '../assets/images/puppeteer.svg'
+import sumiakaproject from '../assets/images/sumiakaproject.png'
+import skupremeproject from '../assets/images/skupremeproject.png'
+import robodialogproject from '../assets/images/robodialogproject.png'
+import smbproject from '../assets/images/smbproject.png'
 
 
 export {
@@ -38,15 +41,18 @@ export {
     meta,
     brain,
     circuit,
+    smbproject,
+    skupremeproject,
+    robodialogproject,
+    sumiakaproject,
+    framermotion,
+    socketIo,
+    puppeteer,
     fire,
     cursor,
     aws,
     cloudinary,
-    futurestore,
-    imagineai,
-    roadtrip,
     sanity,
-    shirtcrafters,
     stripe,
     three,
     microverse,
