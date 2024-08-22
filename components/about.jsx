@@ -5,10 +5,7 @@ import fonts from "../hooks/font";
 import { IconContainer } from "../elements/button";
 import {
   microverse,
-  hackerRank,
-  axios,
-  bootstrap,
-  css,
+  meta,
   express,
   figma,
   firebase,
@@ -19,13 +16,22 @@ import {
   materialUI,
   mongoDB,
   next,
-  postgreSQL,
   rails,
   reactImage,
   redux,
   ruby,
-  tailwind,
-  freeCodeCamp,
+  google,
+  aws,
+  cloudinary,
+  sanity,
+  stripe,
+  three,
+  brain,
+  circuit,
+  fire,
+  framermotion,
+  socketIo,
+  puppeteer
 } from "../utilities/imports";
 import { TestimonialCard, Highlighted } from "../elements/common";
 import { mousemove, mouseout } from "../hooks/magnetic";
@@ -46,45 +52,133 @@ const ExpertiseContainer = styled.div`
 const Expertise = () => {
   return (
     <ExpertiseContainer>
-      <IconContainer icon={express} shadow description="Express" />
-      <IconContainer icon={figma} width="15px" shadow description="Figma" />
-      <IconContainer icon={github} width="25px" shadow description="Github" />
-      <IconContainer icon={html} width="20px" shadow description="HTML" />
-      <IconContainer icon={js} width="20px" shadow description="Javascript" />
       <IconContainer
+        noLink
+        icon={express}
+        shadow
+        description="Node.js / Express"
+      />
+      <IconContainer
+        noLink
+        icon={figma}
+        width="15px"
+        shadow
+        description="Figma"
+      />
+      <IconContainer
+        noLink
+        icon={github}
+        width="25px"
+        shadow
+        description="Github"
+      />
+      <IconContainer
+        noLink
+        icon={framermotion}
+        width="25px"
+        shadow
+        description="Framer Motion"
+      />
+      <IconContainer
+        noLink
+        icon={html}
+        width="20px"
+        shadow
+        description="HTML / CSS"
+      />
+      <IconContainer
+        noLink
+        icon={js}
+        width="20px"
+        shadow
+        description="Javascript"
+      />
+      <IconContainer
+        noLink
         icon={materialUI}
         width="25px"
         shadow
         description="Material UI"
       />
-      <IconContainer icon={mongoDB} shadow description="MongoDB" />
-      <IconContainer icon={next} width="25px" shadow description="Next.js" />
+      <IconContainer noLink icon={mongoDB} shadow description="MongoDB" />
       <IconContainer
+        noLink
+        icon={next}
+        width="25px"
+        shadow
+        description="Next.js"
+      />
+      <IconContainer
+        noLink
+        icon={fire}
+        width="15px"
+        shadow
+        description="Fast Learner"
+      />
+      <IconContainer
+        noLink
+        icon={socketIo}
+        shadow
+        description="Socket IO"
+      />
+      <IconContainer
+        noLink
         icon={reactImage}
         width="25px"
         shadow
-        description="React.js"
+        description="React / React Native"
       />
-      <IconContainer icon={tailwind} shadow description="Tailwind" />
       <IconContainer
-        icon={postgreSQL}
+        noLink
+        icon={brain}
         width="20px"
         shadow
-        description="PostgreSQL"
+        description="Project Manager"
       />
-      <IconContainer icon={axios} width="15px" shadow description="Axios" />
-      <IconContainer icon={bootstrap} shadow description="Bootstrap" />
-      <IconContainer icon={css} width="20px" shadow description="CSS" />
-      <IconContainer icon={redux} width="25px" shadow description="Redux" />
       <IconContainer
+        noLink
+        icon={puppeteer}
+        width="25px"
+        shadow
+        description="Puppeteer"
+      />
+      <IconContainer
+        noLink
         icon={firebase}
         width="20px"
         shadow
         description="Firebase"
       />
-      <IconContainer icon={ruby} width="20px" shadow description="Ruby" />
-      <IconContainer icon={rails} shadow description="Ruby On Rails" />
-      <IconContainer icon={jest} width="20px" shadow description="Jest" />
+      <IconContainer
+        noLink
+        icon={jest}
+        width="20px"
+        shadow
+        description="Jest"
+      />
+      <IconContainer
+        noLink
+        icon={sanity}
+        width="35px"
+        shadow
+        description="Sanity"
+      />
+      <IconContainer
+        noLink
+        icon={circuit}
+        width="15px"
+        shadow
+        description="Effective Communicator"
+      />
+      <IconContainer
+        noLink
+        icon={stripe}
+        width="30px"
+        shadow
+        description="Stripe"
+      />
+      <IconContainer noLink icon={aws} shadow description="AWS" />
+      <IconContainer noLink icon={cloudinary} shadow description="Cloudinary" />
     </ExpertiseContainer>
   );
 };
@@ -167,7 +261,7 @@ const TechnologiesMobile = styled.div`
   }
 `;
 
-const FreeCodeCamp = styled(motion.div)`
+const Google = styled(motion.div)`
   position: absolute;
   right: 5%;
   z-index: 2;
@@ -181,7 +275,7 @@ const FreeCodeCamp = styled(motion.div)`
   }
 `;
 
-const HackerRank = styled(motion.div)`
+const Meta = styled(motion.div)`
   position: absolute;
   left: 15%;
   z-index: 2;
@@ -363,15 +457,23 @@ function About({ about }) {
           initial="initial"
           whileInView="whileInView"
         >
-          A highly skilled full-stack developer with expertise in{" "}
-          <Red>React, React Native, Node.js, </Red> and{" "}
-          <Red>Ruby on Rails.</Red> I have developed real-world projects such as
-          working with supply chain management systems or car maintenance
-          bidding systems etc. With over 3 years of working in this field, I
-          have honed my abilities to thrive in a fast-paced environment,
-          continuously learning and adapting to new technologies.
+          I am a full-stack web developer with over{" "}
+          <Red>Three years of experience</Red> , proficient in both frontend and
+          backend development. Specializing in{" "}
+          <Red>React, Next.js, Express, MongoDB and Node.js</Red> , I create
+          responsive designs, integrate third-party tools, and optimize for SEO.
+          My expertise extends to building robust backend architectures, and
+          design with Figma.
         </Description>
       </AboutMe>
+      <motion.h5
+        style={{ marginTop: "20px", fontSize: "20px" }}
+        variants={onScreenAnimation}
+        initial="initial"
+        whileInView="whileInView"
+      >
+        <Red>MY SKILL SET</Red>
+      </motion.h5>
       <TechnologiesPc
         variants={onScreenAnimation}
         initial="initial"
@@ -388,7 +490,8 @@ function About({ about }) {
       </TechnologiesMobile>
       <Testimonials>
         <Title style={{ marginBottom: "100px" }} fontSize={xLarge}>
-          DONT TAKE MY WORDS <Highlighted>ONLY</Highlighted>
+          DON'T TAKE MY WORDS
+          <Highlighted style={{ marginLeft: "15px" }}>ONLY</Highlighted>
         </Title>
         <TestimonialsContainer
           style={{
@@ -406,40 +509,58 @@ function About({ about }) {
         </TestimonialsContainer>
       </Testimonials>
 
-      <FreeCodeCamp
+      <Google
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
+        onClick={() =>
+          window.open(
+            "https://coursera.org/share/26db931519a929fa09fe1ac52dc9bc3e",
+            "_blank"
+          )
+        }
       >
         <IconContainer
           shadow
-          icon={freeCodeCamp}
+          icon={google}
           tick
-          description="Certified From Free Code Camp"
+          description="Certified From Google"
         />
-      </FreeCodeCamp>
-      <HackerRank
+      </Google>
+      <Meta
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
+        onClick={() =>
+          window.open(
+            "https://coursera.org/share/dd640e24dc605bdad260dbc3eb67956a",
+            "_blank"
+          )
+        }
       >
         <IconContainer
           shadow
-          icon={hackerRank}
+          icon={meta}
           tick
-          description="Certified From Hacker Rank"
+          description="Certified From META"
         />
-      </HackerRank>
+      </Meta>
       <Microverse
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
+        onClick={() =>
+          window.open(
+            "https://www.credential.net/1bb697e9-2cfb-4828-a556-04eae77efc21",
+            "_blank"
+          )
+        }
       >
         <IconContainer
           shadow

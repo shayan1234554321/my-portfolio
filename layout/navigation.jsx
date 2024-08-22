@@ -4,32 +4,6 @@ import arrow from "../assets/images/arrowWhite.png";
 import { colors } from "../utilities/common";
 import { mousemove, mouseout } from "../hooks/magnetic";
 
-const DotNavigationContainer = styled.div`
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  z-index: 5;
-`;
-const Dot = styled.div`
-  width: 15px;
-  height: 15px;
-  margin-top: 20px;
-  background-color: black;
-  border: 2px solid white;
-  border-radius: 50%;
-`;
-
-const DotNavigation = () => {
-  return (
-    <DotNavigationContainer>
-      <Dot></Dot>
-      <Dot></Dot>
-      <Dot></Dot>
-    </DotNavigationContainer>
-  );
-};
-
 const GoToTopContainer = styled.div`
   position: fixed;
   bottom: 50px;
@@ -78,7 +52,6 @@ const GoToTop = ({hero}) => {
 function Navigation({ hero }) {
   return (
     <>
-      {/* <DotNavigation /> */}
       <GoToTop hero={hero} />
     </>
   );

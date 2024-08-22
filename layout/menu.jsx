@@ -5,14 +5,15 @@ import linkedin from "../assets/images/linkedin.png";
 import list from "../assets/images/list.png";
 import styled from "styled-components";
 import { width } from "../utilities/common";
-import fonts from '../hooks/font'
+import fonts from '../hooks/font';
+import { colors } from "../utilities/common";
 
 const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 100px;
-  position: absolute;
+  background-color: ${ colors.background };
   width: calc(100% - 200px );
   z-index: 10 ;
   @media (max-width: 769px) {
@@ -37,11 +38,16 @@ const MenuList = styled.ul`
   font-weight: bold;
   opacity: 0.7;
   letter-spacing: 1px;
+  z-index: 14;
   font-size: ${({normal})=> normal };
+  transition: 0.3s ease-in-out;
   @media (max-width: 769px) {
     display: none;
   }
-  :active {
+  li:hover {
+    transform: scale(1.05);
+  }
+  li:active {
     transform: scale(0.8);
   }
 `
@@ -52,6 +58,7 @@ const MenuListMobile = styled.ul`
   font-weight: bold;
   letter-spacing: 1px;
   font-size: ${({normal})=> normal };
+  transition: 0.3s ease-in-out;
   li {
     margin: 10px 0;
   }
@@ -60,7 +67,9 @@ const MenuListMobile = styled.ul`
     height: min-content;
     font-size: 40px;
     transform: rotateZ(45deg);
-
+  }
+  li:hover {
+    transform: scale(1.1);
   }
 `
 
@@ -133,7 +142,7 @@ function Menu({ about , projects , contact }) {
           </a>
         </SocialLink>
         <MenuList normal={normal} >
-          <li onClick={visitProjects} >PROJECTS</li>
+          <li onClick={visitProjects} >COMPANIES</li>
           <li onClick={visitAbout} >ABOUT</li>
           <li onClick={visitContact} >CONTACT</li>
         </MenuList>
@@ -142,7 +151,7 @@ function Menu({ about , projects , contact }) {
       <MobileMenuList style={{display: showMenu? "block": "none"}} >
         <MenuListMobile normal={normal} >
           <li onClick={()=>setShowMenu(false)} >+</li>
-          <li onClick={visitProjects} >PROJECTS</li>
+          <li onClick={visitProjects} >COMPANIES</li>
           <li onClick={visitAbout} >ABOUT</li>
           <li onClick={visitContact} >CONTACT</li>
         </MenuListMobile>

@@ -80,9 +80,9 @@ const Cursor = styled.img`
   right: -15px;
 `;
 
-export const Highlighted = ({ children }) => {
+export const Highlighted = ({ children , ...rest }) => {
   return (
-    <HighlightedContainer>
+    <HighlightedContainer {...rest} >
       {children}
       <Cursor src={cursor.src} />
     </HighlightedContainer>

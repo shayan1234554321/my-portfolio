@@ -43,7 +43,11 @@ function Footer() {
       <FooterContainer>
         <img src={logo.src} alt="" />
         <Ul fontSize={normal} >
-          <li>RESUME</li>
+          <li>
+            <a href="https://drive.google.com/file/d/1ZIyfFOkMusKeHF4vUuMOyRD0WCInPN17/view?usp=sharing" target="_blank" >
+              RESUME
+            </a>
+          </li>
           <li>
             <a href="https://www.linkedin.com/in/shayan-khan20/" target="_blank" >
               LINKEDIN

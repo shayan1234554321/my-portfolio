@@ -5,9 +5,14 @@ import { CustomButton } from "../elements/button";
 import fonts from "../hooks/font";
 import laptop from "../assets/images/laptop.png";
 import arrow from "../assets/images/arrow.png";
-import project1 from "../assets/images/project1.png";
 import { mousemove, mouseout } from "../hooks/magnetic";
 import { motion } from "framer-motion";
+import {
+  smbproject,
+  skupremeproject,
+  robodialogproject,
+  sumiakaproject,
+} from "../utilities/imports";
 
 const Main = styled.div`
   position: relative;
@@ -52,6 +57,9 @@ const Bottom = styled.div`
   justify-content: center;
   flex-direction: column;
   background-color: ${colors.background};
+  @media (max-width: 426px) {
+    justify-content: end;
+  }
 `;
 
 const Description = styled.p`
@@ -63,7 +71,6 @@ const Description = styled.p`
   opacity: 0.7;
   ${({ changing }) => changing && "animation: opacityChange 2s ease-in-out;"}
   @media (max-width: 426px) {
-    margin-top: -30px;
     width: 90%;
   }
 
@@ -144,9 +151,17 @@ const Title = styled(motion.h2)`
 
 const Buttons = styled.div`
   display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    gap: 20px;
+  }
   gap: 20px;
   @media (max-width: 426px) {
-    flex-direction: column;
+    div {
+      flex-direction: column;
+    }
+    margin-bottom: 40px;
   }
 `;
 
@@ -168,7 +183,7 @@ const ProjectImage = styled.img`
   z-index: 5;
   position: absolute;
   width: 390px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-right: 2px;
   ${({ changing }) => changing && "animation: brightnessChange 2s ease-in-out;"}
 
@@ -315,32 +330,48 @@ const Box2 = styled(motion.div)`
   ${({ changing }) => changing && "animation: fallDownCommon 3s ease-in-out;"}
 `;
 
+const Desc = styled(motion.h3)`
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  border-radius: 40px;
+  padding: 5px 10px;
+`;
+
 function Projects({ projects }) {
   const { normal } = fonts();
   const [current, setCurrent] = useState(0);
   const [changing, setChanging] = useState(false);
   const myProjects = [
     {
-      name: "Flame Cafe",
-      image: project1,
+      name: "RoboDialog",
+      image: robodialogproject,
       description:
-        "A blockchain is a decentralized, distributed and public digital ledger that is used to record transactions across many computers.",
-      code: "https://github.com/shayan1234554321/flame-cafe",
-      visit: "https://shayan1234554321.github.io/flame-cafe/dist/",
+        "An AI Customer Support Agent for websites. Integrate chatbot with your website by just copy and paste a script in website header",
+      visit: "https://robodialog.com/",
     },
     {
-      name: "Knowledge Hub",
-      image: project1,
+      name: "SKUPREME",
+      image: skupremeproject,
       description:
-        "A blockchain is a decentralized, distributed and public digital ledger that is used to record transactions across many computers.",
-      code: "https://github.com/shayan1234554321/flame-cafe",
-      visit: "https://shayan1234554321.github.io/flame-cafe/dist/",
+        "SKUPREME is the most comprehensive solution for your business, in the form of a global inventory and marketplace integration software",
+      visit: "https://skupreme.com/",
+    },
+    {
+      name: "SMB DigitalZone",
+      image: smbproject,
+      description:
+        "SMB DigitalZone is a software house specializing in website development, SEO, and graphic design. They craft custom digital solutions.",
+      visit: "https://smbdigitalzone.com",
+    },
+    {
+      name: "SUMIAKA",
+      image: sumiakaproject,
+      description:
+        "SUMIAKA is an HR solution leveraging machine learning for cost-efficient and highly customizable employee hiring.",
+      visit: "https://www.linkedin.com/company/sumiaka/",
     },
   ];
-
-  function visitCode() {
-    window.open(myProjects[current].code, "_blank");
-  }
 
   function visitLiveLink() {
     window.open(myProjects[current].visit, "_blank");
@@ -357,7 +388,7 @@ function Projects({ projects }) {
     }
     setTimeout(() => {
       setCurrent(next);
-    }, [1500]);
+    }, [1000]);
   }
 
   function projectRight() {
@@ -371,13 +402,23 @@ function Projects({ projects }) {
     }
     setTimeout(() => {
       setCurrent(next);
-    }, [1500]);
+    }, [1000]);
   }
 
   return (
     <Main ref={projects}>
       <BlackBg />
       <Top>
+        <Desc
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+        >
+          COMPANIES I WORKED WITH
+        </Desc>
         <Title
           initial={{
             opacity: 0,
@@ -450,11 +491,8 @@ function Projects({ projects }) {
           {myProjects[current].description}
         </Description>
         <Buttons>
-          <CustomButton onClick={visitCode} long color={colors.blue}>
-            CODE
-          </CustomButton>
-          <CustomButton onClick={visitLiveLink} long color={colors.red}>
-            VISIT
+          <CustomButton onClick={visitLiveLink} long color={colors.black}>
+            VISIT WEBSITE
           </CustomButton>
         </Buttons>
         <Left
