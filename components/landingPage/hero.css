@@ -1,0 +1,414 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    var(--background),
+    var(--background),
+    var(--background),
+    var(--background),
+    var(--backgroundFade)
+  );
+}
+
+.hero .flexCenterColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero .top {
+  position: absolute;
+  top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.hero .themeContainer {
+  cursor: var(--pointer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50px;
+  overflow: hidden;
+}
+
+.hero .themeContainer .moonIcon {
+  position: absolute;
+  transform: translateX(-100%) translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+
+.hero .themeContainer .moonIcon.selected {
+  transform: translateX(0%) translateY(0px);
+  opacity: 1;
+}
+
+.hero .themeContainer .sunIcon {
+  transform: translateX(100%) translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+
+.hero .themeContainer .sunIcon.selected {
+  transform: translateX(0%) translateY(0px);
+  opacity: 1;
+}
+
+.hero .mid {
+  z-index: 3;
+}
+
+.hero .mid > div:nth-child(1) {
+  line-height: 65px;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+}
+
+.hero h2 {
+  font-size: 60px;
+  display: flex;
+  font-weight: 300;
+  user-select: none; /* Standard syntax */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari, Chrome */
+  -ms-user-select: none; /* Internet Explorer */
+}
+
+.hero h2:nth-child(2) {
+  font-weight: 800;
+  background: linear-gradient(
+    125deg,
+    var(--textFadeFirst),
+    var(--textFadeSecond)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero h5 {
+  font-size: 24px;
+  font-weight: 500;
+  user-select: none; /* Standard syntax */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari, Chrome */
+  -ms-user-select: none; /* Internet Explorer */
+}
+
+.hero h6 {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.hero .customButton {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.hero .socialIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.hero svg {
+  width: 27px;
+  height: 27px;
+}
+
+.hero .arrowContainer {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100px);
+  height: 90%;
+}
+
+.hero .sunglassesContainer {
+  display: flex;
+  margin-left: 80px;
+  align-items: center;
+}
+
+.hero .sunglassesContainer > div {
+  width: 100px;
+  background-color: var(--text);
+  border-radius: 100px;
+  font-size: 40px;
+  padding-left: 8px;
+  margin-left: 10px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  cursor: var(--pointer);
+}
+
+.hero .sunglassesContainer > div > div {
+  width: 45px !important;
+  height: 45px !important;
+}
+
+body.dark .hero .sunglassesContainer > div {
+  padding-left: 47px;
+}
+
+.hero .topLeftIcon svg,
+.hero .rightIcon svg,
+.hero .bottomRightIcon svg,
+.hero .bottomLeftIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .topLeftIcon,
+.hero .rightIcon,
+.hero .bottomRightIcon,
+.hero .bottomLeftIcon {
+  position: absolute;
+}
+
+.hero .topLeftIcon {
+  top: 15vh;
+  left: 0;
+  height: 40vh;
+}
+
+.hero .rightIcon {
+  bottom: 0;
+  right: 0;
+  height: 80vh;
+}
+
+.hero .bottomRightIcon {
+  bottom: 0;
+  right: 20vw;
+  height: 25vh;
+}
+
+.hero .bottomLeftIcon {
+  bottom: 0px;
+  left: 0;
+  height: 30vh;
+}
+
+.hero .precisionText > div {
+  margin-top: 3px !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .hero .topLeftIcon {
+    height: 35vh;
+  }
+
+  .hero .rightIcon {
+    height: 75vh;
+  }
+
+  .hero .bottomRightIcon {
+    height: 20vh;
+  }
+
+  .hero .bottomLeftIcon {
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero .bottomRightIcon {
+    height: 150px;
+  }
+
+  .hero .topLeftIcon {
+    height: 300px;
+  }
+
+  .hero .rightIcon {
+    height: 70vh;
+  }
+
+  .hero .bottomLeftIcon {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 600px;
+    max-height: 700px;
+  }
+
+  .hero .top {
+    top: 25px;
+  }
+
+  .hero .top > h4 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .hero .mid > div:nth-child(1) {
+    line-height: 45px;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+  }
+
+  .hero .sunglassesContainer {
+    margin-left: 50px;
+  }
+
+  .hero .arrowContainer {
+    height: 80%;
+    margin-bottom: 10px;
+  }
+
+  .hero .sunglassesContainer > div {
+    width: 70px;
+    padding-left: 5px;
+    margin-left: 10px;
+    height: 40px;
+  }
+
+  .hero .sunglassesContainer > div > div {
+    width: 35px !important;
+    height: 35px !important;
+    margin-bottom: 3px !important;
+  }
+
+  body.dark .hero .sunglassesContainer > div {
+    padding-left: 30px;
+  }
+
+  .hero .bottomRightIcon {
+    height: 10vh;
+  }
+
+  .hero .rightIcon {
+    height: 55vh;
+  }
+
+  .hero .bottomLeftIcon {
+    height: 15vh;
+  }
+
+  .hero h5 {
+    font-size: 20px;
+  }
+
+  .hero h6 {
+    font-size: 10px;
+    opacity: 0.7;
+  }
+
+  .hero .socialIcons svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .hero .customButton {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .hero .precisionText > div {
+    width: 30px !important;
+    height: 30px !important;
+    overflow: visible !important;
+    margin-top: 3px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero .bottomRightIcon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    min-height: 500px;
+    max-height: 500px;
+  }
+
+  .hero .topLeftIcon {
+    height: 170px;
+  }
+
+  .hero .rightIcon {
+    height: 300px;
+  }
+
+  .hero .bottomLeftIcon {
+    height: 70px;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+
+  .hero .mid > div:nth-child(1) {
+    line-height: 28px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+
+  .hero .sunglassesContainer {
+    margin-left: 35px;
+  }
+
+  .hero .arrowContainer {
+    height: 85%;
+    margin-bottom: 5px;
+  }
+
+  .hero .sunglassesContainer > div {
+    width: 50px;
+    padding-left: 3px;
+    margin-left: 5px;
+    height: 30px;
+  }
+
+  .hero .sunglassesContainer > div > div {
+    width: 27px !important;
+    height: 27px !important;
+  }
+
+  body.dark .hero .sunglassesContainer > div {
+    padding-left: 20px;
+  }
+
+  .hero h5 {
+    font-size: 15px;
+  }
+
+  .hero .socialIcons svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero .precisionText > div {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .hero .top > h4 {
+    font-size: 12px;
+  }
+}

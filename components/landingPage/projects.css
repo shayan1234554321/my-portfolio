@@ -1,0 +1,393 @@
+.projects {
+  height: 200vw;
+  z-index: 1;
+}
+
+.projects h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  position: sticky;
+  top: 100px;
+}
+
+.projects .gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.952);
+  backdrop-filter: blur(20px);
+  z-index: 20;
+  animation: galleryMain 0.5s;
+}
+
+@keyframes galleryMain {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body.dark .projects .gallery {
+  background-color: rgba(78, 78, 78, 0.1);
+}
+
+.projects .galleryInner {
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: var(--background);
+  border-radius: 15px 15px 0px 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  animation: galleryInner 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes galleryInner {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.projects .galleryInner > img {
+  width: 90%;
+  max-width: 768px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.projects .galleryInner > h3 {
+  font-size: 35px;
+}
+
+.projects .close {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: var(--pointer);
+}
+
+.projects .projectsContainer2 {
+  position: sticky;
+  top: 0;
+  width: calc(100vw - 20px);
+  min-width: calc(100vw - 20px);
+  max-width: calc(100vw - 20px);
+  overflow: hidden;
+  margin-left: 10px;
+  transition: 0.1s ease-in-out;
+}
+
+.projects .projectsContainer {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.projects .projectsContainer .project {
+  min-width: 100vw;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100vh;
+}
+
+.projects .projectsContainer .projectLeft {
+  max-width: 400px;
+}
+
+.projects .projectsContainer .projectLeft > div {
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  background-color: rgba(233, 233, 233, 0.2);
+  backdrop-filter: blur(10px);
+  margin-top: 20px;
+}
+
+body.dark .projects .projectsContainer .projectLeft > div {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.projects .projectsContainer .projectLeft h3 {
+  font-size: 26px;
+}
+
+.projects .projectsContainer .projectLeft h5 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.projects .projectsContainer .projectLeft .paragraph {
+  font-weight: 300;
+}
+
+.projects .projectsContainer .projectLeft .paragraph li {
+  margin-left: 20px;
+}
+
+.projects .projectsContainer .projectRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+.projects .projectsContainer .projectRight > div {
+  position: relative;
+  width: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.projects .projectsContainer .projectRight > div img:last-child {
+  position: absolute;
+  z-index: -1;
+  width: 350px;
+  margin-bottom: 3px;
+}
+
+.projects .projectsContainer .projectRight > div img:nth-child(1) {
+  width: 500px;
+}
+
+.projects .projectsContainer .projectRight button {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: var(--text);
+  color: var(--background);
+  font-weight: 900;
+  text-transform: uppercase;
+  outline: none;
+  border: 2px solid var(--border);
+  transition: 0.3s ease-in-out;
+  cursor: var(--pointer);
+}
+
+.projects .projectsContainer .projectRight button:hover {
+  transform: scale(1.05);
+}
+
+.projects .projectsContainer .projectRight button:nth-child(2) {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.projects .projectsBG {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.projects .projectsBGM {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .projects h2 {
+    top: 70px;
+  }
+
+  .projects .projectsContainer .projectLeft {
+    max-width: 300px;
+  }
+
+  .projects .projectsContainer .projectLeft h3 {
+    font-size: 20px;
+  }
+
+  .projects .projectsContainer .projectLeft h5 {
+    font-size: 16px;
+  }
+
+  .projects .projectsContainer .projectLeft .paragraph {
+    font-size: 14px;
+  }
+
+  .projects .projectsContainer .projectRight > div img:last-child {
+    width: 230px;
+    margin-bottom: 3px;
+  }
+
+  .projects .projectsContainer .projectRight > div img:nth-child(1) {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    height: 300vw;
+  }
+
+  .projects h2 {
+    font-size: 35px;
+  }
+
+  .projects .projectsContainer .project {
+    gap: 10px;
+  }
+
+  .projects .projectsContainer .projectLeft {
+    max-width: 250px;
+  }
+
+  .projects .projectsContainer .projectLeft h3 {
+    font-size: 16px;
+  }
+
+  .projects .projectsContainer .projectLeft h5 {
+    font-size: 14px;
+  }
+
+  .projects .projectsContainer .projectLeft .paragraph {
+    font-size: 10px;
+  }
+
+  .projects .projectsContainer .projectRight > div img:last-child {
+    width: 173px;
+    margin-bottom: 3px;
+  }
+
+  .projects .projectsContainer .projectRight > div img:nth-child(1) {
+    width: 250px;
+  }
+
+  .projects .projectsContainer .projectRight button {
+    width: 160px;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .projects {
+    height: 300vh;
+  }
+
+  .projects .galleryInner {
+    height: calc(100% - 100px);
+  }
+
+  .projects .close {
+    top: 60px;
+    left: 15px;
+  }
+
+  .projects .galleryInner > h3 {
+    font-size: 25px;
+  }
+
+  .projects .projectsBG {
+    display: none;
+  }
+
+  .projects .projectsBGM {
+    display: block;
+  }
+
+  .projects h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    top: 60px;
+  }
+
+  .projects .projectsContainer .projectLeft h3 {
+    font-size: 14px;
+  }
+
+  .projects .projectsContainer .projectLeft h5 {
+    font-size: 12px;
+  }
+
+  .projects .projectsContainer .project {
+    gap: 5px;
+    flex-direction: column;
+  }
+
+  .projects .projectsContainer .projectLeft {
+    max-width: 300px;
+  }
+
+  .projects .projectsContainer .projectLeft > div {
+    margin-top: 10px;
+  }
+
+  .projects .projectsContainer .projectRight > div {
+    transform: scale(1.3) translateY(-28px);
+  }
+
+  .projects .projectsContainer .projectRight > div img:last-child {
+    width: 140px;
+  }
+
+  .projects .projectsContainer .projectRight > div img:nth-child(1) {
+    width: 200px;
+  }
+
+  .projects .projectsContainer .projectRight button {
+    width: 160px;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .projects h2 {
+    font-size: 25px;
+  }
+
+  .projects .projectsContainer .projectLeft > div {
+    margin-top: 10px;
+  }
+
+  .projects .projectsContainer .projectRight > div {
+    transform: scale(1.3) translateY(-20px);
+  }
+
+  .projects .projectsContainer .projectRight > div img:last-child {
+    width: 125px;
+    margin-bottom: 2.5px;
+  }
+
+  .projects .projectsContainer .projectRight > div img:nth-child(1) {
+    width: 180px;
+  }
+
+  .projects .projectsContainer .projectRight button {
+    width: 160px;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 10px;
+  }
+}

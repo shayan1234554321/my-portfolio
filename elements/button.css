@@ -1,0 +1,42 @@
+.customButton {
+  padding: 10px 30px;
+  background-color: var(--text);
+  color: var(--background);
+  border-radius: 90px;
+  border: solid 10px var(--border);
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: 0.3s ease-in-out;
+  cursor: var(--pointer);
+  user-select: none; /* Standard syntax */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari, Chrome */
+  -ms-user-select: none; /* Internet Explorer */
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.customButton:hover {
+  letter-spacing: 2px;
+  transform: scale(1.05);
+}
+
+.customButton:active {
+  transition: 0.1s ease-in-out;
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 768px) {
+  .customButton {
+    padding: 7px 23px;
+    border: solid 7px var(--border);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .customButton {
+    font-size: 14px;
+  }
+}
