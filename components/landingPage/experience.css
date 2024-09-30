@@ -1,0 +1,320 @@
+:root {
+  --mouse-x: 0;
+  --mouse-y: 0;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  position: absolute;
+  top: 0;
+  gap: 1px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(10px, 1fr)
+  );
+  grid-auto-rows: minmax(10px, 1fr);
+  height: 100%;
+  width: 100%;
+  background-color: rgb(218, 218, 218);
+  z-index: -1;
+  overflow: hidden;
+}
+
+.box {
+  background-color: white;
+}
+
+.experience > h2 {
+  font-size: 45px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.experience .paragraph {
+  font-size: 18px;
+  margin-bottom: 70px;
+  max-width: 550px;
+  text-align: center;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.experience .certificationContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.experience .certificationContainer a {
+  cursor: var(--pointer);
+  transition: 0.2s ease-in-out;
+}
+
+.experience .certificationContainer a:hover {
+  transform: scale(1.1);
+}
+
+.experience .certificationContainer img {
+  height: 30px;
+}
+
+.experience .journeyCard {
+  display: flex;
+  gap: 250px;
+  padding-bottom: 50px;
+}
+
+.experience .journeyCard:nth-last-child(2) {
+  margin-bottom: 0px;
+}
+
+.experience .journeyCard:nth-last-child(3) .description ul:last-child {
+  padding-bottom: 0px;
+}
+
+.experience .journeyCard > div:nth-child(1) {
+  display: flex;
+  gap: 20px;
+  position: sticky;
+  top: 30vh;
+  height: max-content;
+}
+
+.experience .journeyCard .description ul:last-child {
+  padding-bottom: 100px;
+}
+
+.experience .journeyCard > div:nth-child(1) > div:nth-child(1) {
+  width: 25px;
+  height: 25px;
+  background-color: var(--border);
+  box-sizing: content-box;
+  border: 15px solid var(--background);
+  border-radius: 50%;
+}
+
+.experience .journeyCard > div:nth-child(1) > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience .journeyCard h3 {
+  width: 130px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.experience .journeyCard h6 {
+  width: 130px;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.experience .journeyCard .description {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.experience .journeyCard .description h5 {
+  font-size: 18px;
+}
+.experience .journeyCard .description h5:nth-child(2) {
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.experience .journeyCard .description ul {
+  font-size: 16px;
+  font-weight: 500;
+  list-style: disc;
+}
+.experience .journeyCard .description ul li {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.experience .journeyCardsContainer {
+  position: relative;
+  z-index: 1;
+}
+.experience .line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: var(--border);
+  top: 0;
+  left: 26px;
+  z-index: -1;
+}
+
+.experience .line2 {
+  background-color: var(--primary);
+}
+
+@media screen and (max-width: 1024px) {
+  .experience > h2 {
+    font-size: 35px;
+  }
+  .experience > p {
+    font-size: 16px;
+    max-width: 500px;
+  }
+  .experience .journeyCard {
+    gap: 150px;
+  }
+  .experience .journeyCard > div:nth-child(1) {
+    gap: 10px;
+  }
+  .experience .journeyCard .description ul:last-child {
+    padding-bottom: 70px;
+  }
+
+  .experience .journeyCard h3 {
+    font-size: 25px;
+  }
+
+  .experience .journeyCard h6 {
+    font-size: 12px;
+  }
+
+  .experience .journeyCard .description {
+    max-width: 350px;
+  }
+  .experience .journeyCard .description h5:nth-child(2) {
+    margin-bottom: 15px;
+  }
+  .experience .journeyCard .description h5 {
+    font-size: 14px;
+  }
+  .experience .journeyCard .description p {
+    font-size: 14px;
+  }
+  .experience .journeyCard .description ul {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience > h2 {
+    margin-bottom: 20px;
+  }
+  .experience > p {
+    font-size: 14px;
+    max-width: 400px;
+  }
+  .experience .paragraph {
+    font-size: 14px;
+  }
+  .experience .journeyCard {
+    gap: 70px;
+  }
+  .experience .journeyCard > div:nth-child(1) {
+    gap: 5px;
+  }
+  .experience .journeyCard .description ul:last-child {
+    padding-bottom: 70px;
+  }
+  .experience .journeyCard .description h5:nth-child(2) {
+    margin-bottom: 10px;
+  }
+  .experience .journeyCard > div:nth-child(1) > div:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    border: 10px solid var(--background);
+  }
+
+  .experience .journeyCard h3 {
+    width: 100px;
+    font-size: 22px;
+  }
+
+  .experience .journeyCard h6 {
+    width: 100px;
+  }
+
+  .experience .journeyCard .description {
+    max-width: 300px;
+  }
+  .experience .journeyCard .description h5 {
+    font-size: 14px;
+  }
+  .experience .journeyCard .description p {
+    font-size: 12px;
+  }
+  .experience .journeyCard .description ul {
+    font-size: 12px;
+  }
+
+  .experience .line {
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .experience > h2 {
+    font-size: 22px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .experience > p {
+    font-size: 12px;
+    margin-bottom: 50px;
+    max-width: 280px;
+  }
+  .experience .journeyCard {
+    gap: 10px;
+    padding-bottom: 40px;
+  }
+
+  .experience .journeyCard .description ul:last-child {
+    padding-bottom: 00px;
+  }
+
+  .experience .journeyCard > div:nth-child(1) > div:nth-child(1) {
+    width: 15px;
+    height: 15px;
+    border: 8px solid var(--background);
+  }
+
+  .experience .journeyCard h3 {
+    width: 90px;
+    font-size: 18px;
+  }
+
+  .experience .journeyCard h6 {
+    width: 90px;
+    font-size: 10px;
+  }
+
+  .experience .journeyCard .description {
+    max-width: 200px;
+  }
+  .experience .journeyCard .description h5 {
+    font-size: 12px;
+  }
+  .experience .journeyCard .description p {
+    font-size: 8px;
+  }
+  .experience .journeyCard .description ul {
+    font-size: 8px;
+  }
+
+  .experience .line {
+    left: 15px;
+  }
+}

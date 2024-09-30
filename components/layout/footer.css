@@ -1,0 +1,50 @@
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(243, 243, 243);
+  gap: 500px;
+  padding: 10px;
+}
+
+body.dark .footer {
+  background-color: rgb(17, 17, 17);
+}
+
+.footer h4 {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.footer .socialIcons {
+    display: flex;
+    align-items: center;
+}
+
+.footer .socialIcons svg {
+  width: 25px;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    gap: 200px;
+    padding: 5px;
+  }
+  .footer .socialIcons svg {
+    width: 20px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer {
+    gap: 100px;
+    padding: 5px;
+  }
+  .footer .socialIcons svg {
+    width: 20px;
+    margin-left: 10px;
+  }
+}

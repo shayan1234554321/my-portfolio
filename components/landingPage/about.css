@@ -1,0 +1,163 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about > h2 {
+  font-size: 45px;
+}
+
+.about > p {
+  font-size: 18px;
+  max-width: 670px;
+  text-align: center;
+  color: var(--color);
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.about > p .boldAndColored {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.about .mobileBlack {
+  position: absolute;
+  left: 0;
+  top: 300px;
+  transform: rotateZ(45deg) translateX(-70%);
+}
+
+.about .mobileWhite {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  transform: rotateZ(-45deg) translateX(70%);
+}
+
+.cardsContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 10px;
+}
+
+.cardsContainer > div {
+  padding: 20px 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 290px;
+}
+
+.cardsContainer p {
+  font-weight: 300;
+}
+
+.cardsContainer p bold {
+  font-weight: 700;
+}
+
+.cardsContainer > div .expressIcon svg {
+  width: 100px;
+}
+
+@media screen and (max-width: 1450px) {
+  .about .mobileBlack {
+    top: unset;
+    bottom: -200px;
+    transform: rotateZ(45deg) translateX(-80%) scale(0.8);
+  }
+  .about .mobileWhite {
+    bottom: -200px;
+    transform: rotateZ(-45deg) translateX(70%) scale(0.8);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about > h2 {
+    font-size: 35px;
+    max-width: 600px;
+  }
+  .about > p {
+    font-size: 16px;
+  }
+  .about .mobileBlack {
+    top: unset;
+    bottom: -270px;
+  }
+  .about .mobileWhite {
+    bottom: -310px;
+    transform: rotateZ(-45deg) translateX(70%) scale(0.8);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about > h2 {
+    font-size: 25px;
+  }
+  
+  .about > p {
+    font-size: 14px;
+    max-width: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .cardsContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cardsContainer > div {
+    padding: 15px 15px;
+    border: 1px solid var(--border);
+    gap: 30px;
+    max-width: 250px;
+  }
+
+  .cardsContainer p {
+    font-size: 14px;
+  }
+
+  .cardsContainer > div .expressIcon svg {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about > h2 {
+    font-size: 18px;
+  }
+  
+  .about > p {
+    font-size: 12px;
+    line-height: 20px;
+    max-width: 340px;
+  }
+
+  .cardsContainer {
+    gap: 10px;
+  }
+
+  .about .mobileBlack {
+    top: unset;
+    bottom: -240px;
+    transform: rotateZ(45deg) translateX(-80%) scale(0.6);
+  }
+  .about .mobileWhite {
+    bottom: -270px;
+    transform: rotateZ(-45deg) translateX(70%) scale(0.6);
+  }
+}

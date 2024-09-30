@@ -1,0 +1,68 @@
+.header {
+  position: fixed;
+  top: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  border-radius: 100px;
+  border: solid 1px var(--border);
+  box-shadow: 0px 0px 10px var(--border);
+  background-color: var(--background);
+}
+
+.header .dockItem {
+  padding: 5px;
+  margin: 0;
+  display: inline;
+  vertical-align: bottom;
+  transition: 0.2s ease-in-out;
+  cursor: var(--pointer);
+  width: 35px;
+  height: 35px;
+}
+
+.header .dockItem svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header .menuLine {
+  position: absolute;
+  bottom: 2px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  transition: 0.3s ease-in-out;
+}
+
+@media only screen and (min-width: 769px) {
+  .header .dockItem.partialHover {
+    width: 42px;
+    height: 42px;
+  }
+
+  .header .dockItem:hover {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .header {
+    top: 15px;
+    padding: 7px 20px;
+  }
+
+  .header .dockItem {
+    padding: 4px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .header .menuLine {
+    width: 20px;
+  }
+}
