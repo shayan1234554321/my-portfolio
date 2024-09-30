@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { colors, width } from "../utilities/common";
 import { CustomButton, IconContainer } from "../elements/button";
 import phone from "../assets/images/phone.png";
-import carmed from "../assets/images/carmed.png";
+import robodialog from "../assets/images/robodialog.png";
 import skupreme from "../assets/images/skupreme.png";
-import sumiaka from "../assets/images/sumiaka.png";
+import smb from "../assets/images/smb.png";
 import earth from "../assets/images/earth.png";
 import satellite from "../assets/images/satellite.png";
 import fonts from "../hooks/font";
@@ -74,12 +74,11 @@ const H1 = styled(motion.h3)`
   margin-bottom: 20px;
 `;
 
-const IconContainerCarmed = styled(IconContainer)`
+const IconContainerRobodialog = styled(IconContainer)`
   position: absolute;
   top: 100px;
   right: 20%;
   z-index: 12;
-  background-color: ${({ backgroundColor }) => backgroundColor};
   transition: 0.05s ease-in-out;
   @media (max-width: 769px) {
     right: 10%;
@@ -100,10 +99,11 @@ const IconContainerSkupreme = styled(IconContainer)`
   }
 `;
 
-const IconContainerSumiaka = styled(IconContainer)`
+const IconContainerSMB = styled(IconContainer)`
   position: absolute;
   right: 15%;
   bottom: 40%;
+  background-color: ${({ backgroundColor }) => backgroundColor};
   @media (max-width: 769px) {
     bottom: 30%;
     right: 5%;
@@ -277,17 +277,13 @@ function Hero({ hero, contact }) {
             transition: { duration: 0.6 },
           }}
         >
-          Leveraging <Red>3D Technologies</Red>, Latest frameworks, and
+          {/* Leveraging <Red>3D Technologies</Red>, Latest frameworks, and
           innovative design to create applications that deliver
-          cutting-edge user experiences.
+          cutting-edge user experiences. */}
+          Experienced <Red>Full-stack Web developer and Founder</Red>, specializing in the MERN
+          stack, Figma, and seamless third-party integration.
         </H3>
         <CustomButton
-          initial={{ opacity: 0, transform: "translateY(30px)" }}
-          whileInView={{
-            opacity: 1,
-            transform: "translateY(0px)",
-            transition: { duration: 1 },
-          }}
           color={colors.blue}
           icon={phone}
           style={{ marginTop: "20px" }}
@@ -297,7 +293,7 @@ function Hero({ hero, contact }) {
         </CustomButton>
       </MainText>
 
-      <IconContainerCarmed
+      <IconContainerRobodialog
         initial={{ opacity: 0, marginTop: "30px" }}
         whileInView={{
           opacity: 1,
@@ -307,11 +303,10 @@ function Hero({ hero, contact }) {
         onMouseMove={mousemove}
         onMouseOut={mouseout}
         shadow
-        backgroundColor={colors.blue}
-        icon={carmed}
-        description="Worked As Senior Full-Stack Developer At SMB DigitalZone"
+        icon={robodialog}
+        description="Founder of ROBODIALOG"
         width="25px"
-        onClick={()=> window.open("https://smbdigitalzone.com/", "_blank")}
+        onClick={() => window.open("https://robodialog.com", "_blank")}
       />
       <IconContainerSkupreme
         initial={{ opacity: 0, marginTop: "30px" }}
@@ -326,9 +321,9 @@ function Hero({ hero, contact }) {
         icon={skupreme}
         description="Worked As Frontend Developer At Skupreme"
         width="20px"
-        onClick={()=> window.open("https://skupreme.com/", "_blank")}
-        />
-      <IconContainerSumiaka
+        onClick={() => window.open("https://skupreme.com/", "_blank")}
+      />
+      <IconContainerSMB
         initial={{ opacity: 0, marginBottom: "-30px" }}
         whileInView={{
           opacity: 1,
@@ -337,11 +332,12 @@ function Hero({ hero, contact }) {
         }}
         onMouseMove={mousemove}
         onMouseOut={mouseout}
-        width="10px"
+        width="25px"
         shadow
-        icon={sumiaka}
-        description="Worked as Full-Stack Developer at SUMIAKA"
-        onClick={()=> window.open("https://www.linkedin.com/company/sumiaka/", "_blank")}
+        backgroundColor={colors.blue}
+        icon={smb}
+        description="Worked as Full-Stack Developer at SMB Digital Zone"
+        onClick={() => window.open("https://smbdigitalzone.com", "_blank")}
       />
     </Main>
   );

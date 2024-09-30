@@ -40,8 +40,12 @@ const MenuList = styled.ul`
   letter-spacing: 1px;
   z-index: 14;
   font-size: ${({normal})=> normal };
+  transition: 0.3s ease-in-out;
   @media (max-width: 769px) {
     display: none;
+  }
+  li:hover {
+    transform: scale(1.05);
   }
   li:active {
     transform: scale(0.8);
@@ -64,6 +68,7 @@ const MenuListMobile = styled.ul`
   font-weight: bold;
   letter-spacing: 1px;
   font-size: ${({normal})=> normal };
+  transition: 0.3s ease-in-out;
   li {
     margin: 10px 0;
   }
@@ -72,7 +77,9 @@ const MenuListMobile = styled.ul`
     height: min-content;
     font-size: 40px;
     transform: rotateZ(45deg);
-
+  }
+  li:hover {
+    transform: scale(1.1);
   }
 `
 
@@ -152,7 +159,7 @@ function Menu({ about , projects , contact }) {
           <li ><a href="https://drive.google.com/file/d/1V6PODHn36WiW5ry2jJYsbZwUtPFfbE_y/view?usp=sharing" target="_blank" >
               RESUME
             </a></li>
-          <li onClick={visitProjects} >PROJECTS</li>
+          <li onClick={visitProjects} >COMPANIES</li>
           <li onClick={visitAbout} >ABOUT</li>
           <li onClick={visitContact} >CONTACT</li>
         </MenuList>
@@ -161,7 +168,7 @@ function Menu({ about , projects , contact }) {
       <MobileMenuList style={{display: showMenu? "block": "none"}} >
         <MenuListMobile normal={normal} >
           <li onClick={()=>setShowMenu(false)} >+</li>
-          <li onClick={visitProjects} >PROJECTS</li>
+          <li onClick={visitProjects} >COMPANIES</li>
           <li onClick={visitAbout} >ABOUT</li>
           <li onClick={visitContact} >CONTACT</li>
         </MenuListMobile>

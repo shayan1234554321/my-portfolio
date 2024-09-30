@@ -16,7 +16,6 @@ import {
   materialUI,
   mongoDB,
   next,
-  postgreSQL,
   rails,
   reactImage,
   redux,
@@ -29,7 +28,10 @@ import {
   three,
   brain,
   circuit,
-  fire
+  fire,
+  framermotion,
+  socketIo,
+  puppeteer
 } from "../utilities/imports";
 import { TestimonialCard, Highlighted } from "../elements/common";
 import { mousemove, mouseout } from "../hooks/magnetic";
@@ -50,49 +52,133 @@ const ExpertiseContainer = styled.div`
 const Expertise = () => {
   return (
     <ExpertiseContainer>
-      <IconContainer noLink icon={express} shadow description="Node.js / Express" />
-      <IconContainer noLink icon={figma} width="15px" shadow description="Figma" />
-      <IconContainer noLink icon={github} width="25px" shadow description="Github" />
-      <IconContainer noLink icon={html} width="20px" shadow description="HTML / CSS" />
-      <IconContainer noLink icon={js} width="20px" shadow description="Javascript" />
-      <IconContainer noLink
+      <IconContainer
+        noLink
+        icon={express}
+        shadow
+        description="Node.js / Express"
+      />
+      <IconContainer
+        noLink
+        icon={figma}
+        width="15px"
+        shadow
+        description="Figma"
+      />
+      <IconContainer
+        noLink
+        icon={github}
+        width="25px"
+        shadow
+        description="Github"
+      />
+      <IconContainer
+        noLink
+        icon={framermotion}
+        width="25px"
+        shadow
+        description="Framer Motion"
+      />
+      <IconContainer
+        noLink
+        icon={html}
+        width="20px"
+        shadow
+        description="HTML / CSS"
+      />
+      <IconContainer
+        noLink
+        icon={js}
+        width="20px"
+        shadow
+        description="Javascript"
+      />
+      <IconContainer
+        noLink
         icon={materialUI}
         width="25px"
         shadow
         description="Material UI"
       />
       <IconContainer noLink icon={mongoDB} shadow description="MongoDB" />
-      <IconContainer noLink icon={next} width="25px" shadow description="Next.js" />
-      <IconContainer noLink icon={fire} width="15px" shadow description="Fast Learner" />
-      <IconContainer noLink
+      <IconContainer
+        noLink
+        icon={next}
+        width="25px"
+        shadow
+        description="Next.js"
+      />
+      <IconContainer
+        noLink
+        icon={fire}
+        width="15px"
+        shadow
+        description="Fast Learner"
+      />
+      <IconContainer
+        noLink
+        icon={socketIo}
+        shadow
+        description="Socket IO"
+      />
+      <IconContainer
+        noLink
         icon={reactImage}
         width="25px"
         shadow
         description="React / React Native"
       />
-      <IconContainer noLink
-        icon={postgreSQL}
+      <IconContainer
+        noLink
+        icon={brain}
         width="20px"
         shadow
-        description="PostgreSQL"
+        description="Project Manager"
       />
-      <IconContainer noLink icon={brain} width="20px" shadow description="Project Manager" />
-      <IconContainer noLink icon={redux} width="25px" shadow description="Redux" />
-      <IconContainer noLink 
+      <IconContainer
+        noLink
+        icon={puppeteer}
+        width="25px"
+        shadow
+        description="Puppeteer"
+      />
+      <IconContainer
+        noLink
         icon={firebase}
         width="20px"
         shadow
         description="Firebase"
       />
-      <IconContainer noLink icon={ruby} width="20px" shadow description="Ruby" />
-      <IconContainer noLink icon={rails} shadow description="Ruby On Rails" />
-      <IconContainer noLink icon={jest} width="20px" shadow description="Jest" />
-      <IconContainer noLink icon={sanity} width="35px" shadow description="Sanity" />
-      <IconContainer noLink icon={circuit} width="15px" shadow description="Effective Communicator" />
-      <IconContainer noLink icon={stripe} width="30px" shadow description="Stripe" />
+      <IconContainer
+        noLink
+        icon={jest}
+        width="20px"
+        shadow
+        description="Jest"
+      />
+      <IconContainer
+        noLink
+        icon={sanity}
+        width="35px"
+        shadow
+        description="Sanity"
+      />
+      <IconContainer
+        noLink
+        icon={circuit}
+        width="15px"
+        shadow
+        description="Effective Communicator"
+      />
+      <IconContainer
+        noLink
+        icon={stripe}
+        width="30px"
+        shadow
+        description="Stripe"
+      />
       <IconContainer noLink icon={aws} shadow description="AWS" />
       <IconContainer noLink icon={cloudinary} shadow description="Cloudinary" />
-      <IconContainer noLink icon={three} shadow description="Three.js" />
     </ExpertiseContainer>
   );
 };
@@ -371,15 +457,17 @@ function About({ about }) {
           initial="initial"
           whileInView="whileInView"
         >
-          Experienced MERN stack developer with a proven track record in designing and
-          crafting impactful applications using<Red> React, Next.js, Express, and Node.js </Red>. With <Red>2+
-          years</Red> of hands-on experience, I specialize in integrating third-party tools and
-          optimizing SEO, and I am committed to delivering exceptional user experiences
-          through collaborative problem-solving.
+          I am a full-stack web developer with over{" "}
+          <Red>Three years of experience</Red> , proficient in both frontend and
+          backend development. Specializing in{" "}
+          <Red>React, Next.js, Express, MongoDB and Node.js</Red> , I create
+          responsive designs, integrate third-party tools, and optimize for SEO.
+          My expertise extends to building robust backend architectures, and
+          design with Figma.
         </Description>
       </AboutMe>
       <motion.h5
-        style={{ marginTop: "20px" , fontSize: "20px" }}
+        style={{ marginTop: "20px", fontSize: "20px" }}
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
@@ -402,7 +490,8 @@ function About({ about }) {
       </TechnologiesMobile>
       <Testimonials>
         <Title style={{ marginBottom: "100px" }} fontSize={xLarge}>
-           DON'T TAKE MY WORDS<Highlighted style={{ marginLeft : "15px" }} >ONLY</Highlighted>
+          DON'T TAKE MY WORDS
+          <Highlighted style={{ marginLeft: "15px" }}>ONLY</Highlighted>
         </Title>
         <TestimonialsContainer
           style={{
@@ -426,7 +515,12 @@ function About({ about }) {
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
-        onClick={()=> window.open("https://coursera.org/share/26db931519a929fa09fe1ac52dc9bc3e", "_blank")}
+        onClick={() =>
+          window.open(
+            "https://coursera.org/share/26db931519a929fa09fe1ac52dc9bc3e",
+            "_blank"
+          )
+        }
       >
         <IconContainer
           shadow
@@ -441,7 +535,12 @@ function About({ about }) {
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
-        onClick={()=> window.open("https://coursera.org/share/dd640e24dc605bdad260dbc3eb67956a", "_blank")}
+        onClick={() =>
+          window.open(
+            "https://coursera.org/share/dd640e24dc605bdad260dbc3eb67956a",
+            "_blank"
+          )
+        }
       >
         <IconContainer
           shadow
@@ -456,7 +555,12 @@ function About({ about }) {
         variants={onScreenAnimation}
         initial="initial"
         whileInView="whileInView"
-        onClick={()=> window.open("https://www.credential.net/1bb697e9-2cfb-4828-a556-04eae77efc21", "_blank")}
+        onClick={() =>
+          window.open(
+            "https://www.credential.net/1bb697e9-2cfb-4828-a556-04eae77efc21",
+            "_blank"
+          )
+        }
       >
         <IconContainer
           shadow
