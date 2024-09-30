@@ -46,6 +46,16 @@ const MenuList = styled.ul`
   li:active {
     transform: scale(0.8);
   }
+  li {
+    transition: 0.2s ease-in-out;
+  }
+  li:hover {
+    transform: scale(1.1);
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `
 
 const MenuListMobile = styled.ul`
@@ -92,6 +102,10 @@ const SocialLink = styled.div`
     transform: scale(0.8);
   }
 
+  @media (max-width: 1020px) {
+    margin-left: 0;
+  }
+
   @media (max-width: 769px) {
     margin-left: 0;
   }
@@ -135,6 +149,9 @@ function Menu({ about , projects , contact }) {
           </a>
         </SocialLink>
         <MenuList normal={normal} >
+          <li ><a href="https://drive.google.com/file/d/1V6PODHn36WiW5ry2jJYsbZwUtPFfbE_y/view?usp=sharing" target="_blank" >
+              RESUME
+            </a></li>
           <li onClick={visitProjects} >PROJECTS</li>
           <li onClick={visitAbout} >ABOUT</li>
           <li onClick={visitContact} >CONTACT</li>
