@@ -21,6 +21,8 @@ import {
   SocketIcon,
   StripeIcon,
   TSIcon,
+  ShopifyIcon,
+  EthIcon,
 } from "@/elements/icons";
 import { styled } from "styled-components";
 import { motion, useScroll } from "framer-motion";
@@ -253,6 +255,20 @@ const Expertise = () => {
         width="20px"
         shadow
         description="Type Script"
+      />
+      <IconContainer
+        noLink
+        Icon={<ShopifyIcon />}
+        width="20px"
+        shadow
+        description="Shopify"
+      />
+      <IconContainer
+        noLink
+        Icon={<EthIcon />}
+        width="20px"
+        shadow
+        description="Ether.js"
       />
       <IconContainer
         noLink

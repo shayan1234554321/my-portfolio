@@ -7,7 +7,11 @@ import { initial, initial2, whileInView } from "@/utility/constants";
 
 const JourneyCard = ({ item }) => {
   return (
-    <motion.div initial={initial2} whileInView={whileInView} className="journeyCard">
+    <motion.div
+      initial={initial2}
+      whileInView={whileInView}
+      className="journeyCard"
+    >
       <div>
         <div></div>
         <div className="dateContainer">
@@ -38,12 +42,46 @@ const Experience = () => {
     {
       date: {
         year: 2024,
+        month: "Nov - Current",
+      },
+      description: (
+        <>
+          <h5>Authornate - Pakistan, Islamabad (Onsite)</h5>
+          <h5>Mid-Senior Full Stack Developer</h5>
+          <ul>
+            <li>
+              Contributed in TrinityPad, a web and mobile platform for
+              blockchain-based project investments, implementing Privy for
+              authentication, ethers.js for web3 transactions, and a
+              TypeScript-based backend using Express.js and Firebase.
+            </li>
+            <li>
+              Played a crucial role in GameGPT, implementing frontend designs
+              and integrating Web3 smart contracts, including successful
+              deployment on the Ethereum testnet, facilitating an auction
+              feature used by 1,000+ users.
+            </li>
+            <li>
+              Led web3 authentication and secure transaction handling, ensuring
+              seamless integration with blockchain technology.
+            </li>
+            <li>
+              Actively collaborated on UI/UX design in Figma, contributing to
+              user-friendly and visually engaging interfaces.
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      date: {
+        year: 2024,
         month: "Feb - Current",
       },
       description: (
         <>
           <h5>ROBODIALOG - Pakistan Remote</h5>
-          <h5>Lead Full Stack Web Developer</h5>
+          <h5>Founder</h5>
           <ul>
             <li>
               Developed a full-stack web platform using Next.js, Node.js, and
@@ -319,8 +357,14 @@ const Experience = () => {
 
   return (
     <div className="experience">
-      <motion.h2 initial={initial} whileInView={whileInView}>MY JOURNEY</motion.h2>
-      <motion.p initial={initial} whileInView={whileInView} className="paragraph">
+      <motion.h2 initial={initial} whileInView={whileInView}>
+        MY JOURNEY
+      </motion.h2>
+      <motion.p
+        initial={initial}
+        whileInView={whileInView}
+        className="paragraph"
+      >
         I have over 3 years of experience in which i have worked with US ,
         Pakistan and Dubai companies remotely
       </motion.p>
@@ -355,8 +399,18 @@ const Experience = () => {
           }}
         />
       </div>
-      <motion.h2 initial={initial} whileInView={whileInView} style={{ marginBottom: "5px" }}>EDUCATION</motion.h2>
-      <motion.div initial={initial} whileInView={whileInView} className="paragraph">
+      <motion.h2
+        initial={initial}
+        whileInView={whileInView}
+        style={{ marginBottom: "5px" }}
+      >
+        EDUCATION
+      </motion.h2>
+      <motion.div
+        initial={initial}
+        whileInView={whileInView}
+        className="paragraph"
+      >
         <p>Certified By</p>
         <div className="certificationContainer">
           <a

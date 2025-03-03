@@ -81,7 +81,6 @@ const Contact = () => {
       images: [
         <ExpoIcon color="var(--background)" />,
         <ExpressIcon color="var(--background)" />,
-        <MongoIcon />,
       ],
       initial: {
         marginTop: 30,
