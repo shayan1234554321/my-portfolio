@@ -65,26 +65,26 @@ const projects = [
     gallery: ["/ss1.png", "/ss2.png"],
   },
   {
-    name: "FUTURE STORE",
+    name: "TRINITYPAD",
     about:
-      "Future store is an ecommerce website that sells the latest tech gadgets. You can have many products , have your cart and checkout with stripe integrations.",
+      "Trinity Pad revolutionizes early-stage Web3 investments with cutting-edge AI models, making it easy to enter and thrive in the Web3 ecosystem.",
     description: (
       <ul>
         <li>
-          Frontend Development using Next.js with a clean design and mobile
-          responsive
+          Typescript Frontend with Next.js and Tailwind CSS for a sleek and
+          responsive UI
         </li>
-        <li>Secure Payments using Stripe</li>
-        <li>Headless CMS for dynamic Products store using Sanity</li>
+        <li>Ethers.js And Privy for Web 3.0 Connections</li>
+        <li>Headless CMS for dynamic data using Sanity</li>
         <li>
-          Cart and Checkout features with ability to select more than one
-          product
+          Typescript Backend with Node.js, Express, and Firebase for efficient
+          data management
         </li>
       </ul>
     ),
     images: ["/project3.png"],
-    code: "https://github.com/shayan1234554321/ecommerce",
-    visit: "https://ecommerce-sigma-snowy.vercel.app/",
+    demo: "https://www.youtube.com/watch?v=aGuI4hgs0zQ",
+    visit: "https://trinitypad.com/",
   },
   {
     name: "FLICKSY",
