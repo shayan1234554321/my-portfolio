@@ -82,7 +82,7 @@ export default function Home() {
       <div className="section" ref={AboutRef} id="about">
         <About />
       </div>
-      <div className="section" ref={ProjectsRef} id="projects">
+      <div className="section" ref={ProjectsRef} id="projects" style={{overflowX: "unset"}}>
         <Projects isMenuScrolling={isMenuScrolling} />
       </div>
       <div className="section" ref={ExperienceRef} id="experience">
