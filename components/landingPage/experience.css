@@ -8,7 +8,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;
   padding-bottom: 50px;
   position: relative;
   z-index: 1;
@@ -130,6 +129,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .experience .journeyCard .description h5 {
   font-size: 18px;
 }
@@ -152,6 +152,7 @@
   position: relative;
   z-index: 1;
 }
+
 .experience .line {
   position: absolute;
   width: 1px;
@@ -248,7 +249,7 @@
   }
 
   .experience .journeyCard .description {
-    max-width: 300px;
+    max-width: 45vw;
   }
   .experience .journeyCard .description h5 {
     font-size: 14px;
@@ -301,9 +302,9 @@
     font-size: 10px;
   }
 
-  .experience .journeyCard .description {
+  /* .experience .journeyCard .description {
     max-width: 200px;
-  }
+  } */
   .experience .journeyCard .description h5 {
     font-size: 12px;
   }
