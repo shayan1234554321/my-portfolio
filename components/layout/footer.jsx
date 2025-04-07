@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="footer">
       <h4>
         <a
-          href="https://drive.google.com/file/d/1ng352cUikgquIYU-9diBB1m4IsWnK-9P/view?usp=sharing"
+          href="https://drive.google.com/file/d/1v_pe_bDJ7CiEWr1YUk7YZF8c1Z_t9QrI/view?usp=sharing"
           target="_blank"
         >
           RESUME
