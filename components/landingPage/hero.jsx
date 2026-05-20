@@ -14,7 +14,10 @@ import {
 } from "@/elements/icons";
 import CustomButton from "@/elements/button";
 import Image from "next/image";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("./LottieWrapper"), {
+  ssr: false,
+});
 import sunglassesAnimation from "../../public/sunglasses.json";
 import precisionAnimation from "../../public/precision.json";
 import { useEffect, useState } from "react";

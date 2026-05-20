@@ -53,7 +53,7 @@ const GithubIcon = ({ color }) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       height="1.2em"
       viewBox="0 0 24 24"
       width="1.2em"
@@ -84,9 +84,9 @@ const TailwindIcon = ({ color = "currentColor" }) => {
       <g clip-path="url(#prefix__clip0)">
         <path
           fill="#38bdf8"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </g>
       <defs>
@@ -203,9 +203,9 @@ const FacebookIcon = ({ color }) => {
           y1="89.199%"
           y2="12.194%"
         >
-          <stop offset=".06%" stop-color="#0867DF" />
-          <stop offset="45.39%" stop-color="#0668E1" />
-          <stop offset="85.91%" stop-color="#0064E0" />
+          <stop offset=".06%" stopColor="#0867DF" />
+          <stop offset="45.39%" stopColor="#0668E1" />
+          <stop offset="85.91%" stopColor="#0064E0" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-1-_R_0_"
@@ -214,8 +214,8 @@ const FacebookIcon = ({ color }) => {
           y1="75.874%"
           y2="23.985%"
         >
-          <stop offset="13.23%" stop-color="#0064DF" />
-          <stop offset="99.88%" stop-color="#0064E0" />
+          <stop offset="13.23%" stopColor="#0064DF" />
+          <stop offset="99.88%" stopColor="#0064E0" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-2-_R_0_"
@@ -224,8 +224,8 @@ const FacebookIcon = ({ color }) => {
           y1="89.127%"
           y2="16.131%"
         >
-          <stop offset="1.47%" stop-color="#0072EC" />
-          <stop offset="68.81%" stop-color="#0064DF" />
+          <stop offset="1.47%" stopColor="#0072EC" />
+          <stop offset="68.81%" stopColor="#0064DF" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-3-_R_0_"
@@ -234,8 +234,8 @@ const FacebookIcon = ({ color }) => {
           y1="90.19%"
           y2="15.745%"
         >
-          <stop offset="7.31%" stop-color="#007CF6" />
-          <stop offset="99.43%" stop-color="#0072EC" />
+          <stop offset="7.31%" stopColor="#007CF6" />
+          <stop offset="99.43%" stopColor="#0072EC" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-4-_R_0_"
@@ -244,8 +244,8 @@ const FacebookIcon = ({ color }) => {
           y1="58.301%"
           y2="37.004%"
         >
-          <stop offset="7.31%" stop-color="#007FF9" />
-          <stop offset="100%" stop-color="#007CF6" />
+          <stop offset="7.31%" stopColor="#007FF9" />
+          <stop offset="100%" stopColor="#007CF6" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-5-_R_0_"
@@ -254,8 +254,8 @@ const FacebookIcon = ({ color }) => {
           y1="12.502%"
           y2="63.624%"
         >
-          <stop offset="7.31%" stop-color="#007FF9" />
-          <stop offset="100%" stop-color="#0082FB" />
+          <stop offset="7.31%" stopColor="#007FF9" />
+          <stop offset="100%" stopColor="#0082FB" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-6-_R_0_"
@@ -264,8 +264,8 @@ const FacebookIcon = ({ color }) => {
           y1="68.859%"
           y2="23.174%"
         >
-          <stop offset="27.99%" stop-color="#007FF8" />
-          <stop offset="91.41%" stop-color="#0082FB" />
+          <stop offset="27.99%" stopColor="#007FF8" />
+          <stop offset="91.41%" stopColor="#0082FB" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-7-_R_0_"
@@ -274,8 +274,8 @@ const FacebookIcon = ({ color }) => {
           y1="6.235%"
           y2="98.514%"
         >
-          <stop offset="0%" stop-color="#0082FB" />
-          <stop offset="99.95%" stop-color="#0081FA" />
+          <stop offset="0%" stopColor="#0082FB" />
+          <stop offset="99.95%" stopColor="#0081FA" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-8-_R_0_"
@@ -284,8 +284,8 @@ const FacebookIcon = ({ color }) => {
           y1="4.661%"
           y2="69.077%"
         >
-          <stop offset="6.19%" stop-color="#0081FA" />
-          <stop offset="100%" stop-color="#0080F9" />
+          <stop offset="6.19%" stopColor="#0081FA" />
+          <stop offset="100%" stopColor="#0080F9" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-9-_R_0_"
@@ -294,8 +294,8 @@ const FacebookIcon = ({ color }) => {
           y1="59.32%"
           y2="33.244%"
         >
-          <stop offset="0%" stop-color="#027AF3" />
-          <stop offset="100%" stop-color="#0080F9" />
+          <stop offset="0%" stopColor="#027AF3" />
+          <stop offset="100%" stopColor="#0080F9" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-10-_R_0_"
@@ -304,8 +304,8 @@ const FacebookIcon = ({ color }) => {
           y1="50.001%"
           y2="50.001%"
         >
-          <stop offset="0%" stop-color="#0377EF" />
-          <stop offset="99.94%" stop-color="#0279F1" />
+          <stop offset="0%" stopColor="#0377EF" />
+          <stop offset="99.94%" stopColor="#0279F1" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-11-_R_0_"
@@ -314,8 +314,8 @@ const FacebookIcon = ({ color }) => {
           y1="35.298%"
           y2="57.811%"
         >
-          <stop offset=".19%" stop-color="#0471E9" />
-          <stop offset="100%" stop-color="#0377EF" />
+          <stop offset=".19%" stopColor="#0471E9" />
+          <stop offset="100%" stopColor="#0377EF" />
         </linearGradient>
         <linearGradient
           id="lobe-icons-meta-12-_R_0_"
@@ -324,8 +324,8 @@ const FacebookIcon = ({ color }) => {
           y1="19.719%"
           y2="84.908%"
         >
-          <stop offset="27.65%" stop-color="#0867DF" />
-          <stop offset="100%" stop-color="#0471E9" />
+          <stop offset="27.65%" stopColor="#0867DF" />
+          <stop offset="100%" stopColor="#0471E9" />
         </linearGradient>
       </defs>
     </svg>
@@ -697,10 +697,10 @@ const N8nIcon = ({ color }) => {
       >
         <path
           stroke={color ? color : "var(--text)"}
-          clip-rule="evenodd"
+          clipRule="evenodd"
           d="M24 8.4c0 1.325-1.102 2.4-2.462 2.4-1.146 0-2.11-.765-2.384-1.8h-3.436c-.602 0-1.115.424-1.214 1.003l-.101.592a2.38 2.38 0 01-.8 1.405c.412.354.704.844.8 1.405l.1.592A1.222 1.222 0 0015.719 15h.975c.273-1.035 1.237-1.8 2.384-1.8 1.36 0 2.461 1.075 2.461 2.4S20.436 18 19.078 18c-1.147 0-2.11-.765-2.384-1.8h-.975c-1.204 0-2.23-.848-2.428-2.005l-.101-.592a1.222 1.222 0 00-1.214-1.003H10.97c-.308.984-1.246 1.7-2.356 1.7-1.11 0-2.048-.716-2.355-1.7H4.817c-.308.984-1.246 1.7-2.355 1.7C1.102 14.3 0 13.225 0 11.9s1.102-2.4 2.462-2.4c1.183 0 2.172.815 2.408 1.9h1.337c.236-1.085 1.225-1.9 2.408-1.9 1.184 0 2.172.815 2.408 1.9h.952c.601 0 1.115-.424 1.213-1.003l.102-.592c.198-1.157 1.225-2.005 2.428-2.005h3.436c.274-1.035 1.238-1.8 2.384-1.8C22.898 6 24 7.075 24 8.4zm-1.23 0c0 .663-.552 1.2-1.232 1.2-.68 0-1.23-.537-1.23-1.2 0-.663.55-1.2 1.23-1.2.68 0 1.231.537 1.231 1.2zM2.461 13.1c.68 0 1.23-.537 1.23-1.2 0-.663-.55-1.2-1.23-1.2-.68 0-1.231.537-1.231 1.2 0 .663.55 1.2 1.23 1.2zm6.153 0c.68 0 1.231-.537 1.231-1.2 0-.663-.55-1.2-1.23-1.2-.68 0-1.231.537-1.231 1.2 0 .663.55 1.2 1.23 1.2zm10.462 3.7c.68 0 1.23-.537 1.23-1.2 0-.663-.55-1.2-1.23-1.2-.68 0-1.23.537-1.23 1.2 0 .663.55 1.2 1.23 1.2z"
           fill="#EA4B71"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         />
       </svg>
     </div>
@@ -717,7 +717,7 @@ const ClaudeIcon = ({ color }) => {
         <path
           d="M4.709 15.955l4.72-2.647.08-.23-.08-.128H9.2l-.79-.048-2.698-.073-2.339-.097-2.266-.122-.571-.121L0 11.784l.055-.352.48-.321.686.06 1.52.103 2.278.158 1.652.097 2.449.255h.389l.055-.157-.134-.098-.103-.097-2.358-1.596-2.552-1.688-1.336-.972-.724-.491-.364-.462-.158-1.008.656-.722.881.06.225.061.893.686 1.908 1.476 2.491 1.833.365.304.145-.103.019-.073-.164-.274-1.355-2.446-1.446-2.49-.644-1.032-.17-.619a2.97 2.97 0 01-.104-.729L6.283.134 6.696 0l.996.134.42.364.62 1.414 1.002 2.229 1.555 3.03.456.898.243.832.091.255h.158V9.01l.128-1.706.237-2.095.23-2.695.08-.76.376-.91.747-.492.584.28.48.685-.067.444-.286 1.851-.559 2.903-.364 1.942h.212l.243-.242.985-1.306 1.652-2.064.73-.82.85-.904.547-.431h1.033l.76 1.129-.34 1.166-1.064 1.347-.881 1.142-1.264 1.7-.79 1.36.073.11.188-.02 2.856-.606 1.543-.28 1.841-.315.833.388.091.395-.328.807-1.969.486-2.309.462-3.439.813-.042.03.049.061 1.549.146.662.036h1.622l3.02.225.79.522.474.638-.079.485-1.215.62-1.64-.389-3.829-.91-1.312-.329h-.182v.11l1.093 1.068 2.006 1.81 2.509 2.33.127.578-.322.455-.34-.049-2.205-1.657-.851-.747-1.926-1.62h-.128v.17l.444.649 2.345 3.521.122 1.08-.17.353-.608.213-.668-.122-1.374-1.925-1.415-2.167-1.143-1.943-.14.08-.674 7.254-.316.37-.729.28-.607-.461-.322-.747.322-1.476.389-1.924.315-1.53.286-1.9.17-.632-.012-.042-.14.018-1.434 1.967-2.18 2.945-1.726 1.845-.414.164-.717-.37.067-.662.401-.589 2.388-3.036 1.44-1.882.93-1.086-.006-.158h-.055L4.132 18.56l-1.13.146-.487-.456.061-.746.231-.243 1.908-1.312-.006.006z"
           fill="#D97757"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         />
       </svg>
     </div>

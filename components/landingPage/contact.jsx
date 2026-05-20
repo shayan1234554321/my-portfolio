@@ -134,7 +134,9 @@ const Contact = () => {
             <h4>{service.title}</h4>
             <p>{service.description}</p>
             <div className="images">
-              {service.images.map((image, index) => image)}
+              {service.images.map((image, idx) =>
+                React.cloneElement(image, { key: idx })
+              )}
             </div>
           </motion.div>
         ))}
