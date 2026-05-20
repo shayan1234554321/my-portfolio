@@ -41,29 +41,22 @@ const Experience = () => {
   const experience = [
     {
       date: {
-        year: 2024,
-        month: "Nov - Current",
+        year: 2025,
+        month: "June - Current",
       },
       description: (
         <>
-          <h5>Authornate - Pakistan, Islamabad (Onsite)</h5>
-          <h5>Mid-Senior Full Stack Developer</h5>
+          <h5>Iplex - Pakistan, Islamabad (Onsite)</h5>
+          <h5>Mid-Senior Full Stack MERN Developer</h5>
           <ul>
             <li>
-              Contributed in TrinityPad, a web and mobile platform for
-              blockchain-based project investments, implementing Privy for
-              authentication, ethers.js for web3 transactions, and a
-              TypeScript-based backend using Express.js and Firebase.
+              Built core modules of VFLOW (MERN), enabling multi-store
+              management with role-based access to streamline retail operations.
             </li>
             <li>
-              Played a crucial role in GameGPT, implementing frontend designs
-              and integrating Web3 smart contracts, including successful
-              deployment on the Ethereum testnet, facilitating an auction
-              feature used by 1,000+ users.
-            </li>
-            <li>
-              Led web3 authentication and secure transaction handling, ensuring
-              seamless integration with blockchain technology.
+              Implemented shift and event management system with role
+              assignment, scheduling logic, and secure JWT-based authentication
+              in a scalable Express.js backend.
             </li>
             <li>
               Actively collaborated on UI/UX design in Figma, contributing to
@@ -84,21 +77,22 @@ const Experience = () => {
           <h5>Founder</h5>
           <ul>
             <li>
-              Developed a full-stack web platform using Next.js, Node.js, and
-              MongoDB, ensuring seamless integration of AI chatbot services and
-              achieving a 35% boost in customer support automation efficiency.
+              an AI-powered customer support platform using Vector DB (Qdrant),
+              Langchain, Express.js, reactp, Next.js and typescript, enabling
+              website owners to embed smart chatbots and human interaction for
+              real-time support.
             </li>
             <li>
               Architected scalable back-end systems with MongoDB, utilizing
               indexing, reducing database query times by 40% under heavy load.
             </li>
             <li>
-              Implemented Vector Database using FAISS, Hugging Face Vector Model
-              and Langchain for RAG Model in Node.js
+              Implemented Vector Database using Qdrant, Hugging Face Vector
+              Model and Langchain for RAG Model in Node.js
             </li>
             <li>
               Designed highly responsive, pixel-perfect frontend interfaces
-              using React and Next.js.
+              using Reactp and Next.js.
             </li>
             <li>
               Implemented secure authentication and tokenization, protecting
@@ -106,13 +100,8 @@ const Experience = () => {
               industry standards.
             </li>
             <li>
-              Integrated third-party APIs for automation and analytics,
-              streamlining data processing and boosting operational efficiency
-              by 30%.
-            </li>
-            <li>
-              Deployed and managed the platform on VPS hosting, optimizing
-              server performance and maintaining 99.9% uptime.
+              Deployed and managed the platform on VPS hosting using Coolify,
+              optimizing server performance and maintaining 99.9% uptime.
             </li>
           </ul>
         </>
@@ -125,89 +114,24 @@ const Experience = () => {
       },
       description: (
         <>
-          <h5>SMB DigitalZone - UAE, Dubai Remote</h5>
-          <h5>Lead Full Stack Web Developer</h5>
+          <h5>Authornate - Pakistan, Islamabad (Onsite)</h5>
+          <h5>Mid Full Stack MERN Developer</h5>
           <ul>
             <li>
-              Built scalable web applications using Next.js, Cloudinary,
-              Node.js, and MongoDB, ensuring smooth frontend-backend
-              synchronization and a 20% improvement in page load speed.
+              Contributed in TrinityPad, a web and mobile platform for
+              blockchain-based project investments, implementing Privy for
+              authentication, ethers.js for web3 transactions, and a
+              TypeScript-based backend using Express.js and Firebase.
             </li>
             <li>
-              Integrated Major social media for connecting accounts and posting
-              to their platforms like Facebook, Youtube, TikTok , Twitter, etc.
+              Played a crucial role in GameGPT, implementing frontend designs
+              and integrating Web3 smart contracts, including successful
+              deployment on the Ethereum testnet, facilitating an auction
+              feature used by 1,000+ users
             </li>
             <li>
-              Implemented JWT-based authentication and OAuth for third-party
-              logins, significantly enhancing user security and data protection.
-            </li>
-            <li>
-              Designed and developed E-commerce, blog, company, and other
-              websites with improved security and SEO optimization.
-            </li>
-            <li>
-              Collaborated closely with product managers and designers,
-              delivering detailed and highly optimized UI/UX experiences.
-            </li>
-            <li>
-              Integrated Stripe for secure and seamless payment processing,
-              achieving.
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      date: {
-        year: 2023,
-        month: "Aug - Sep",
-      },
-      description: (
-        <>
-          <h5>SUMIAKA - United States Remote</h5>
-          <h5>Junior Full Stack Web Developer</h5>
-          <ul>
-            <li>
-              Developed comprehensive HR management tools, ensuring an intuitive
-              user interface with React and Material-UI for enhanced
-              productivity.
-            </li>
-            <li>
-              Collaborated with the design team on Figma to create user-friendly
-              interfaces.
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      date: {
-        year: 2023,
-        month: "Jan - July",
-      },
-      description: (
-        <>
-          <h5>Carmed - Pakistan Remote</h5>
-          <h5>Mid Senior Full Stack Web and Mobile Developer</h5>
-          <ul>
-            <li>
-              Developed a cross-platform mobile application using React Native,
-              integrating Firebase for real-time updates, resulting in a 30%
-              reduction in response times for live user interactions.
-            </li>
-            <li>
-              Collaborated closely with the design team on Figma, iterating on
-              UI/UX to deliver a highly intuitive and visually compelling mobile
-              experience.
-            </li>
-            <li>
-              Proactively identified and addressed security vulnerabilities in
-              Next.js, Express, and React Native, reducing potential security
-              risks by 25%.
-            </li>
-            <li>
-              Integrated cloud-based solution to enhance application
-              scalability.
+              Led web3 authentication and secure transaction handling, ensuring
+              seamless integration with blockchain technology
             </li>
           </ul>
         </>
@@ -216,64 +140,38 @@ const Experience = () => {
     {
       date: {
         year: 2022,
-        month: "June - Jan 2023",
+        month: "May - Oct 2024",
       },
       description: (
         <>
-          <h5>Skupreme - United States Remote</h5>
-          <h5>Junior Frontend Developer</h5>
+          <h5>Multiple Contract Based - Remote</h5>
+          <h5>Full Stack Web Developer</h5>
           <ul>
             <li>
-              Developed responsive and visually engaging user interfaces using
-              Next.js and styled-components
+              Provided frontend development with Next.js for SKUPREME, a US
+              based startup. This project is about Automated Commerce & Supply
+              Chain Management used by 1000+ sellers
             </li>
             <li>
-              Received recognition from project managers for consistently
-              delivering high-quality UI/UX solutions ahead of deadlines,
-              contributing to the overall success of multiple projects.
+              Developed Weeshare under SMB DigitalZone, integrating OAuth with
+              platforms like Facebook, YouTube, TikTok, and Twitter, enabling
+              users to securely connect accounts and schedule or post content
+              directly via a unified dashboard.
             </li>
             <li>
-              Actively participated in team code reviews, identifying potential
-              issues early on and contributing to a 15% improvement in code
-              quality and maintainability.
+              Engineered complex content and eCommerce platforms for SMB
+              DigitalZone with features like OAuth login, Stripe payments,
+              social media API integrations, and performance-optimized Next.js
+              frontend
             </li>
             <li>
-              Created reusable frontend components in React, accelerating
-              development speed and improving design consistency across the
-              platform.
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      date: {
-        year: 2021,
-        month: "Feb - June 2022",
-      },
-      description: (
-        <>
-          <h5>Fiver and Other Projects - Pakistan Remote</h5>
-          <h5>Software Developer</h5>
-          <ul>
-            <li>
-              Developed responsive and visually engaging user interfaces using
-              Next.js, React Native Expo, Node.js, MongoDB, Cloudinary,
-              Typescript and styled-components
+              Developed cross-platform mobile and web apps as Carmed,
+              integrating Firebase for real-time interactions and React Native
+              for a seamless mobile user experience.
             </li>
             <li>
-              Maintained clean and sustainable codebases, ensuring project
-              maintainability and delivering on time with a 100% success rate
-              for project deadlines.
-            </li>
-            <li>
-              Utilized MongoDB indexing and optimized queries to improve
-              database performance, leading to a 30% increase in app
-              responsiveness.
-            </li>
-            <li>
-              Designed and developed full-stack applications with a focus on
-              frontend precision and backend scalability
+              Collaborated closely with product managers and designers,
+              delivering detailed and highly optimized UI/UX experiences.
             </li>
           </ul>
         </>
@@ -313,13 +211,13 @@ const Experience = () => {
     },
     {
       date: {
-        year: 2022,
-        month: "Jan 2020 - March",
+        year: 2021,
+        month: "March",
       },
       description: (
         <>
-          <h5>Fazaia Degree Collage</h5>
-          <h5>Pakistan, Risalpur</h5>
+          <h5>City University</h5>
+          <h5>Pakistan, Peshawar</h5>
           <p>
             At high school, they offer a comprehensive education program in
             computer engineering that prepares students for success in this
@@ -365,7 +263,7 @@ const Experience = () => {
         whileInView={whileInView}
         className="paragraph"
       >
-        I have over 3 years of experience in which i have worked with US ,
+        I have over 4 years of experience in which i have worked with US ,
         Pakistan and Dubai companies remotely
       </motion.p>
       <div className="journeyCardsContainer" ref={ref}>

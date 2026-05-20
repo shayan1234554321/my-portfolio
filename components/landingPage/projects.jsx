@@ -12,26 +12,67 @@ const projects = [
     description: (
       <ul>
         <li>
-          Live Conversation with AI Customer Support Agent in your website with
-          just Copy and Paste of a script
+          Built RoboDialog, a production AI chatbot SaaS platform. Implemented LangGraph-based agentic workflows with RAG, hybrid vector search (dense + BM25 + reranking), and multi-provider LLM failover.
         </li>
-        <li>Implemented MongoDB Indexing to speed up queries upto 10x</li>
+        <li>Created a lightweight Preact widget (script-tag deployment) with real-time sync</li>
         <li>
-          Implemented training AI on your Data using RAG Model. Using FAISS
-          Vector store, Hugging Face model and Langchain in Node.js
-        </li>
-        <li>
-          Focusing on user data security and privacy using tokenization and
-          encryption
-        </li>
-        <li>
-          Giving the ability to create Tickets using chatflow customization
+          WebSocket-based real-time chat via Centrifugo with live agent handoffs
         </li>
       </ul>
     ),
     images: ["/project1.png"],
     visit: "https://www.robodialog.com",
     demo: "https://www.youtube.com/watch?v=wNTgGfObfU0",
+  },
+  {
+    name: "VERSUS CLIP",
+    about: "Versus Clip is a gaming mobile app where users create players, select winners, watch animated game simulations, record videos.",
+    description: (
+      <ul>
+        <li>
+          Cross platform mobile app using React Native, Expo and TypeScript for both IOS and Android
+        </li>
+        <li>
+          Implemented physics-based game engine with collision detection, elastic physics, and frame-rate independent movement
+        </li>
+        <li>
+          Built extensible game module system with isolated, self-contained game packages registered in a central registry
+        </li>
+        <li>
+          Created player management system with custom player creation, photo gallery integration, and category organization
+        </li>
+        <li>
+          Integrated Google Mobile Ads (rewarded + interstitial) for monetization with pre-load strategy and cooldown enforcement
+        </li>
+      </ul>
+    ),
+    images: ["/project2.webp"],
+    visit: "https://play.google.com/store/apps/details?id=com.versusclip.official",
+    gallery: ["/ss3.webp", "/ss4.webp"],
+  },
+  {
+    name: "SKUPREME",
+    about:
+      "SKUPREME is a comprehensive SaaS platform that automates eCommerce operations and supply chain management",
+    description: (
+      <ul>
+        <li>
+          Contributed to the frontend of a full-stack SaaS platform that integrats 60+ sales channels, marketplaces, warehouses, and carriers for real-time data synchronization.
+        </li>
+        <li>
+          Built the centralized catalog management UI where users can add, edit, and delete products and propagate changes across all connected channels.
+        </li>
+        <li>
+          Developed the frontend for inventory management features that has multi-warehouse support, smart distribution and transfer dashboard.
+        </li>
+        <li>
+          Created the UI for automated order management with rule-based fulfillment workflows.
+        </li>
+      </ul>
+    ),
+    images: ["/project3.webp"],
+    demo: "https://www.youtube.com/watch?v=WC_oTysFV0A",
+    visit: "https://skupreme.com/",
   },
   {
     name: "ZYLO ( UBER CLONE )",
@@ -63,56 +104,6 @@ const projects = [
     images: ["/project2.png"],
     code: "https://github.com/shayan1234554321/zylo",
     gallery: ["/ss1.png", "/ss2.png"],
-  },
-  {
-    name: "TRINITYPAD",
-    about:
-      "Trinity Pad revolutionizes early-stage Web3 investments with cutting-edge AI models, making it easy to enter and thrive in the Web3 ecosystem.",
-    description: (
-      <ul>
-        <li>
-          Typescript Frontend with Next.js and Tailwind CSS for a sleek and
-          responsive UI
-        </li>
-        <li>Ethers.js And Privy for Web 3.0 Connections</li>
-        <li>Headless CMS for dynamic data using Sanity</li>
-        <li>
-          Typescript Backend with Node.js, Express, and Firebase for efficient
-          data management
-        </li>
-      </ul>
-    ),
-    images: ["/project3.png"],
-    demo: "https://www.youtube.com/watch?v=aGuI4hgs0zQ",
-    visit: "https://trinitypad.com/",
-  },
-  {
-    name: "FLICKSY",
-    about:
-      "Flicksy is a video sharing app where users can create and share videos.",
-    description: (
-      <ul>
-        <li>
-          Cross platform mobile app using React Native and Expo for both IOS and
-          Android
-        </li>
-        <li>
-          The likes functionality is made as such that the app can be scaled to
-          Millions of users. With the use of indexing and model separation
-        </li>
-        <li>
-          Youtube like functionality for profiles, where users can access other
-          public profiles and see their videos and statistics
-        </li>
-        <li>
-          A secure backend made with Node.js, Express and MongoDB. And security
-          with Auth, tokens, Hashing and more
-        </li>
-      </ul>
-    ),
-    images: ["/project4.png"],
-    code: "https://github.com/shayan1234554321/flicksy",
-    gallery: ["/ss3.png", "/ss4.png"],
   },
 ];
 
@@ -162,28 +153,26 @@ const Projects = ({ isMenuScrolling }) => {
                   <img src="/laptop.png" alt="" />
                   <img src={project.images[0]} alt="project" />
                 </div>
-                <button
-                  onClick={() => {
-                    if (project.visit) {
-                      window.open(project.visit, "_blank");
-                    } else {
-                      setSelectedGallery(project.gallery);
-                    }
-                  }}
-                >
-                  {project.visit ? "VISIT" : "GALLERY"}
-                </button>
-                <button
-                  onClick={() => {
-                    if (project.code) {
-                      window.open(project.code, "_blank");
-                    } else {
-                      window.open(project.demo, "_blank");
-                    }
-                  }}
-                >
-                  {project.code ? "CODE" : "DEMO"}
-                </button>
+                {project.visit && (
+                  <button onClick={() => window.open(project.visit, "_blank")}>
+                    VISIT
+                  </button>
+                )}
+                {project.gallery && (
+                  <button onClick={() => setSelectedGallery(project.gallery)}>
+                    GALLERY
+                  </button>
+                )}
+                {project.code && (
+                  <button onClick={() => window.open(project.code, "_blank")}>
+                    CODE
+                  </button>
+                )}
+                {project.demo && (
+                  <button onClick={() => window.open(project.demo, "_blank")}>
+                    DEMO
+                  </button>
+                )}
               </div>
             </div>
           ))}

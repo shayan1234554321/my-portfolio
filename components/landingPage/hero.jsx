@@ -14,7 +14,10 @@ import {
 } from "@/elements/icons";
 import CustomButton from "@/elements/button";
 import Image from "next/image";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("./LottieWrapper"), {
+  ssr: false,
+});
 import sunglassesAnimation from "../../public/sunglasses.json";
 import precisionAnimation from "../../public/precision.json";
 import { useEffect, useState } from "react";
@@ -70,7 +73,7 @@ const Hero = () => {
       <div className="top">
         <motion.h4 initial={initial} whileInView={whileInView}>
           <a
-            href="https://drive.google.com/file/d/1P5xYXMsj513Irb7UcHDJzbE7FQgaFLqT/view?usp=sharing"
+            href="https://drive.google.com/file/d/12jLpinwC-oUJ-I2WdjJJ8E_rgiURzglD/view?usp=sharing"
             target="_blank"
           >
             RESUME
