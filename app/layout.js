@@ -14,9 +14,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <title>Shayan Ali Bakhsh Portfolio</title>
+        <link rel="icon" href="/icon.png" />
         <meta
           property="og:description"
-          content="Shayan Ali Bakhsh portfolio website. A web developer and Mobile Developer"
+          content="Shayan Ali Bakhsh portfolio website. A web and Mobile Developer"
         />
         <meta property="og:title" content="Shayan Ali Bakhsh Portfolio" />
       </Head>

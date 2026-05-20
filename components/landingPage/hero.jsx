@@ -70,7 +70,7 @@ const Hero = () => {
       <div className="top">
         <motion.h4 initial={initial} whileInView={whileInView}>
           <a
-            href="https://drive.google.com/file/d/1P5xYXMsj513Irb7UcHDJzbE7FQgaFLqT/view?usp=sharing"
+            href="https://drive.google.com/file/d/12jLpinwC-oUJ-I2WdjJJ8E_rgiURzglD/view?usp=sharing"
             target="_blank"
           >
             RESUME

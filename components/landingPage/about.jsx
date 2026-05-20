@@ -6,23 +6,21 @@ import {
   CloudinaryIcon,
   ExpressIcon,
   FigmaIcon,
-  FirebaseIcon,
   FramerIcon,
   GithubIcon,
-  HTMLIcon,
-  JestIcon,
-  JSIcon,
-  MaterialIcon,
-  MongoIcon,
   NextIcon,
   PuppeteerIcon,
   ReactIcon,
-  SanityIcon,
   SocketIcon,
   StripeIcon,
   TSIcon,
   ShopifyIcon,
-  EthIcon,
+  N8nIcon,
+  ClaudeIcon,
+  ShadCNIcon,
+  FacebookIcon,
+  CoolifyIcon,
+  ExpoIcon,
 } from "@/elements/icons";
 import { styled } from "styled-components";
 import { motion, useScroll } from "framer-motion";
@@ -100,6 +98,12 @@ const IconContainerStyled = styled(motion.div)`
       z-index: -1;
     }
   }
+  
+  > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .techIcons {
     width: 25px;
@@ -176,106 +180,106 @@ const Expertise = () => {
     >
       <IconContainer
         noLink
-        Icon={<ExpressIcon />}
+        Icon={<N8nIcon color={"red"} />}
         shadow
-        description="Node.js / Express"
+        description="n8n"
       />
       <IconContainer
         noLink
-        Icon={<FramerIcon />}
+        Icon={<ClaudeIcon />}
         shadow
-        description="Framer Motion"
+        description="Claude Code"
       />
       <IconContainer
         noLink
-        Icon={<FigmaIcon />}
+        Icon={<ShopifyIcon />}
         width="15px"
+        shadow
+        description="Shopify"
+      />
+      <IconContainer
+        noLink
+        Icon={<FigmaIcon color={"var(--text)"} />}
+        width="25px"
         shadow
         description="Figma"
       />
       <IconContainer
         noLink
-        Icon={<GithubIcon color={"var(--text)"} />}
+        Icon={<GithubIcon />}
         width="25px"
         shadow
         description="Github"
       />
       <IconContainer
         noLink
-        Icon={<HTMLIcon />}
-        width="20px"
-        shadow
-        description="HTML / CSS"
-      />
-      <IconContainer
-        noLink
-        Icon={<JSIcon />}
-        width="20px"
-        shadow
-        description="Javascript"
-      />
-      <IconContainer
-        noLink
-        Icon={<MaterialIcon />}
-        width="25px"
-        shadow
-        description="Material UI"
-      />
-      <IconContainer
-        noLink
-        Icon={<MongoIcon />}
-        width="25px"
-        shadow
-        description="MongoDB"
-      />
-      <IconContainer
-        noLink
-        Icon={<NextIcon />}
-        width="25px"
-        shadow
-        description="Next.js"
-      />
-      <IconContainer
-        noLink
-        Icon={<FirebaseIcon />}
-        width="15px"
-        shadow
-        description="Firebase"
-      />
-      <IconContainer
-        noLink
         Icon={<ReactIcon />}
+        width="20px"
+        shadow
+        description="Context API"
+      />
+      <IconContainer
+        noLink
+        Icon={<StripeIcon />}
         width="25px"
         shadow
-        description="React / React Native"
+        description="Stripe"
+      />
+      <IconContainer
+        noLink
+        Icon={<ShadCNIcon />}
+        width="25px"
+        shadow
+        description="Shadcn"
+      />
+      <IconContainer
+        noLink
+        Icon={<FacebookIcon />}
+        width="25px"
+        shadow
+        description="Graph API"
+      />
+      <IconContainer
+        noLink
+        Icon={<CoolifyIcon />}
+        width="18px"
+        shadow
+        description="Coolify self Host"
+      />
+      <IconContainer
+        noLink
+        Icon={<img src="/centrifuge.svg" style={{ width: "100%" }} />}
+        width="20px"
+        shadow
+        description="Centrifugo"
       />
       <IconContainer
         noLink
         Icon={<TSIcon />}
         width="20px"
         shadow
-        description="Type Script"
+        description="TypeScript"
       />
       <IconContainer
         noLink
-        Icon={<ShopifyIcon />}
+        Icon={<FramerIcon />}
         width="20px"
         shadow
-        description="Shopify"
+        description="Framer Motion"
       />
       <IconContainer
         noLink
-        Icon={<EthIcon />}
+        Icon={<img src="/tailwind.svg" style={{ width: "100%" }} />}
         width="20px"
         shadow
-        description="Ether.js"
+        description="Tailwind"
       />
       <IconContainer
         noLink
-        Icon={<StripeIcon />}
+        Icon={<ExpoIcon />}
         width="20px"
         shadow
-        description="Stripe"
+        description="React Native Expo"
       />
       <IconContainer
         noLink
@@ -286,24 +290,24 @@ const Expertise = () => {
       />
       <IconContainer
         noLink
-        Icon={<JestIcon />}
+        Icon={<CloudinaryIcon />}
         width="20px"
         shadow
-        description="Jest"
+        description="Cloudinary"
       />
       <IconContainer noLink Icon={<AWSIcon />} shadow description="AWS" />
       <IconContainer
         noLink
-        Icon={<CloudinaryIcon />}
+        Icon={<img src="/qdrant.svg" style={{ width: "100%" }} />}
         shadow
-        description="Cloudinary"
+        description="Qdrant"
       />
       <IconContainer
         noLink
-        Icon={<SanityIcon />}
+        Icon={<NextIcon />}
         width="35px"
         shadow
-        description="Sanity"
+        description="Next.js"
       />
       <IconContainer
         noLink
@@ -317,7 +321,7 @@ const Expertise = () => {
 
 const Card = ({ item }) => {
   return (
-    <motion.div initial={initial2} whileInView={whileInView}>
+    <motion.div initial={initial2} whileInView={whileInView} className="card-inner">
       <p>{item.text}</p>
       {item.techs}
     </motion.div>
@@ -369,11 +373,13 @@ const About = () => {
       </motion.h2>
       <motion.p initial={initial} whileInView={whileInView}>
         Full-stack web and Mobile developer with{" "}
-        <span className="boldAndColored">3+ years</span> of experience in{" "}
-        <span className="boldAndColored">MERN stack and React Native</span>. I
-        build responsive, SEO-friendly websites, mobile apps and robust
-        backends. Having design skills in{" "}
-        <span className="boldAndColored">Figma</span>.
+        <span className="boldAndColored">4+ years</span> of experience in{" "}
+        <span className="boldAndColored">MERN stack and React Native Expo</span>
+        . I have successfully built platforms such as{" "}
+        <a href="https://robodialog.com" target="_blank" className="boldAndColored">RoboDialog</a> and{" "}
+        <a href="https://skupreme.com" target="_blank" className="boldAndColored">Skupreme</a> by utilizing
+        technologies like Next.js, Langchain, LangGraph, Qdrant, Typescript,
+        MongoDB and Express.js
       </motion.p>
       <div className="cardsContainer">
         {data.map((item, index) => (
@@ -390,8 +396,8 @@ const About = () => {
       >
         <Expertise />
       </TechnologiesMobile>
-      <img src="/mobile-black.svg" className="mobileBlack" />
-      <img src="/mobile-white.svg" className="mobileWhite" />
+      <img src="/mobile-1.webp" className="mobileBlack" />
+      <img src="/mobile-2.webp" className="mobileWhite" />
     </div>
   );
 };
